@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 25px;
   font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
   font-size: 14px;
   border-bottom: 1px solid rgb(224, 224, 224);
@@ -14,17 +14,52 @@
 }
 
 .title {
-  padding: 0px;
+  position: absolute;
+  left: 43%;
   font-size: 25px;
   font-weight: bold;
-  font-family: monospace;
-  color: rgb(0, 44, 109);
+  font-family: "Courier";
+  color: rgb(14, 80, 58);
   padding-right: 50px;
 }
 
 .left {
   display: flex;
 }
+
+.search-button {
+  position: absolute;
+  right: 80px;
+  top: 21px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search-button:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.signin {
+  display: flex;
+  align-items: center;
+}
+
+.header-button {
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  background-image: url(search_icon.png);
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
 
 .right {
   display: flex;

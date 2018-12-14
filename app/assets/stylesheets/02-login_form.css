@@ -15,7 +15,9 @@
 .form-above {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 20px;
+  height: 22px;
   width: 360px;
   background: rgb(247, 247, 247);
   border-top: 1px solid rgb(224, 224, 224);
@@ -26,7 +28,9 @@
 .form-below {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 20px;
+  height: 22px;
   width: 360px;
   background: rgb(247, 247, 247);
   border-bottom: 1px solid rgb(224, 224, 224);
@@ -36,7 +40,6 @@
 
 .form-above > p {
   color: blue;
-  /* font-weight: 500; */
 }
 
 .form-above > p:hover {
@@ -45,7 +48,6 @@
 
 .form-below > p {
   color: blue;
-  /* font-weight: 500; */
 }
 
 .form-below > p:hover {
@@ -71,6 +73,11 @@
   width: 94%;
   height: 40px;
   padding-left: 20px;
+  cursor: default;
+}
+
+.login-input:hover {
+  cursor: default;
 }
 
 .login-input:focus {
@@ -94,8 +101,9 @@
 }
 
 .submit:hover {
+  transition: .5s ease;
   background: rgb(18, 104, 75);
-  bottom: 3px;
+  bottom: 1px;
 }
 
 .errors {
