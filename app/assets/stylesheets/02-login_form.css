@@ -1,0 +1,114 @@
+.login-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 60px;
+  background: rgb(240, 240, 240);
+  width: auto;
+  min-height: 100%;
+  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.form-above {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 360px;
+  background: rgb(247, 247, 247);
+  border-top: 1px solid rgb(224, 224, 224);
+  border-right: 1px solid rgb(224, 224, 224);
+  border-left: 1px solid rgb(224, 224, 224);
+}
+
+.form-below {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 360px;
+  background: rgb(247, 247, 247);
+  border-bottom: 1px solid rgb(224, 224, 224);
+  border-right: 1px solid rgb(224, 224, 224);
+  border-left: 1px solid rgb(224, 224, 224);
+}
+
+.form-above > p {
+  color: blue;
+  /* font-weight: 500; */
+}
+
+.form-above > p:hover {
+  color: black;
+}
+
+.form-below > p {
+  color: blue;
+  /* font-weight: 500; */
+}
+
+.form-below > p:hover {
+  color: black;
+}
+
+.form-fieldset {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 360px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(224, 224, 224);
+}
+
+.form-fieldset > h1 {
+  font-size: 32px;
+}
+
+.login-input {
+  margin-bottom: 20px;
+  border: 1px solid rgb(224, 224, 224);
+  width: 94%;
+  height: 40px;
+  padding-left: 20px;
+}
+
+.login-input:focus {
+  border: 1px solid rgb(27, 161, 116);
+}
+
+.submit {
+  position: relative;
+  background: rgb(27, 161, 116);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.session-submit {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid rgb(27, 161, 116);
+}
+
+.submit:hover {
+  background: rgb(18, 104, 75);
+  bottom: 3px;
+}
+
+.errors {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  background: red;
+  color: white;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.err {
+  margin: 10px;
+}

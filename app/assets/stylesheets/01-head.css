@@ -1,0 +1,31 @@
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+  font-size: 14px;
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.head > div > p:hover {
+  color: green;
+}
+
+.title {
+  padding: 0px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: monospace;
+  color: rgb(0, 44, 109);
+  padding-right: 50px;
+}
+
+.left {
+  display: flex;
+}
+
+.right {
+  display: flex;
+}

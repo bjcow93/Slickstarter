@@ -6,11 +6,7 @@ import { AuthRoute } from '../util/route_util';
 
 const App = () => (
   <div>
-    <header>
-      <h1>Slickstarter</h1>
-      <NavbarContainer />
-    </header>
-
+    <NavbarContainer />
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
   </div>

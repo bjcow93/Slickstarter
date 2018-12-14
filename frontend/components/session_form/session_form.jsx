@@ -4,11 +4,12 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: 'Email',
-      password: 'Password',
-      name: 'Name'
+      email: '',
+      password: '',
+      name: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
   update(field) {
@@ -23,55 +24,75 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+  handleDemoLogin(e) {
+    e.preventDefault();
+
+    this.props.processForm({
+      email: "ben@email.com",
+      name: "Ben",
+      password: "password"
+    });
+  }
+
   renderErrors() {
+    if (this.props.errors.length === 0) return (<div></div>);
     return (
+      <div className="errors">
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className='err' key={`error-${i}`}>
             {error}
           </li>
         ))}
       </ul>
+      </div>
     );
   }
+
+
 
   render() {
     if (this.props.formType === 'Sign up') {
       return (
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
-            <br />
-            <p>Have an account? {this.props.navLink}</p>
-            {this.props.formType}
-            {this.renderErrors()}
-            <div className="login-form">
+            <div className="form-above">Have an account?&nbsp;&nbsp;<p>{this.props.navLink}</p></div>
+            <fieldset className="form-fieldset">
+              <h1>{this.props.formType}</h1>
               <br />
-              <label>Name:
-              <input type="text"
-                  value={this.state.name}
-                  onChange={this.update('name')}
-                  className="login-input"
-                />
-              </label>
+              {this.renderErrors()}
               <br />
-              <label>Email:
-                <input type="text"
-                  value={this.state.email}
-                  onChange={this.update('email')}
-                  className="login-input"
-                />
-              </label>
-              <br />
-              <label>Password:
-                <input type="password"
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                  className="login-input"
-                />
-              </label>
-              <br />
-              <input className="session-submit" type="submit" value={this.props.formType} />
-            </div>
+              <div className="login-form">
+                <div className="input">
+                  <input type="text"
+                      value={this.state.name}
+                      onChange={this.update('name')}
+                      className="login-input"
+                      placeholder="Name"
+                    />
+                </div>
+                <div className="input">
+                  <input type="email"
+                    value={this.state.email}
+                    onChange={this.update('email')}
+                    className="login-input"
+                    placeholder="Email"
+                  />
+                </div>
+                <div className="input">
+                  <input type="password"
+                    value={this.state.password}
+                    onChange={this.update('password')}
+                    className="login-input"
+                    placeholder="Password"
+                  />
+                </div>
+                <br />
+                <div className="submit">
+                  <input className="session-submit" type="submit" value="Create Account" />
+                </div>
+              </div>
+            </fieldset>
           </form>
         </div>
       );
@@ -79,30 +100,39 @@ class SessionForm extends React.Component {
       return (
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
-            <br />
-            <p>New to Slickstarter? {this.props.navLink}</p>
-            {this.props.formType}
-            {this.renderErrors()}
-            <div className="login-form">
+            <fieldset className="form-fieldset">
+              <h1>{this.props.formType}</h1>
               <br />
-              <label>Email:
-                <input type="text"
-                  value={this.state.email}
-                  onChange={this.update('email')}
-                  className="login-input"
-                />
-              </label>
+              {this.renderErrors()}
               <br />
-              <label>Password:
-                <input type="password"
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                  className="login-input"
-                />
-              </label>
-              <br />
-              <input className="session-submit" type="submit" value={this.props.formType} />
-            </div>
+              <div className="login-form">
+                <div className="input">
+                  <input type="email"
+                    value={this.state.email}
+                    onChange={this.update('email')}
+                    className="login-input"
+                    placeholder="Email"
+                  />
+                </div>
+                <div className="input">
+                  <input type="password"
+                    value={this.state.password}
+                    onChange={this.update('password')}
+                    className="login-input"
+                    placeholder="Password"
+                  />
+                </div>
+                <br />
+                <div className="submit">
+                  <input className="session-submit" type="submit" value="Log me in!" />
+                </div>
+                  <br />
+                <div className="submit">
+                  <input onClick={this.handleDemoLogin} className="session-submit" type="submit" value="Demo Login" />
+                </div>
+              </div>
+            </fieldset>
+            <div className="form-below">New to Slickstarter?&nbsp;&nbsp;<p>{this.props.navLink}</p></div>
           </form>
         </div>
       );
