@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 25px;
+  height: 16px;
   font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
   font-size: 14px;
   border-bottom: 1px solid rgb(224, 224, 224);
@@ -60,7 +61,61 @@
   object-fit: cover;
 }
 
+.icon {
+  background-image: url(icon.png);
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
 
 .right {
   display: flex;
+}
+
+.modal-background {
+  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.modal-section {
+  background-color: white;
+  border: 1px solid grey;
+  width: 500px;
+  z-index: 11;
+  position: absolute;
+  display: wrap;
+  right: 20px;
+  top: 75px;
+}
+
+.modal-section-a {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  padding: 25px;
+  height: 16px;
+  font-weight: bold;
+}
+
+
+.modal-section-b {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgb(224, 224, 224);
+  font-size: 14px;
+  padding: 25px;
+  height: 16px;
+  /* transform: translate(-50%, -50%); */
+}
+
+.header-button:hover {
+  color: green;
+  text-decoration: underline;
 }
