@@ -27,7 +27,7 @@
 .slick {
   position: absolute;
   left: 43.5%;
-  background-image: url(slick.png);
+  background-image: image-url('slick.png');
   width: 200px;
   height: 20px;
   background-size: 175px;
@@ -65,7 +65,7 @@
 }
 
 .search-icon {
-  background-image: url(search_icon.png);
+  background-image: image-url('search_icon.png');
   width: 25px;
   height: 25px;
   background-size: contain;
@@ -74,7 +74,7 @@
 }
 
 .icon {
-  background-image: url(icon.png);
+  background-image: image-url('icon.png');
   width: 25px;
   height: 25px;
   background-size: contain;
