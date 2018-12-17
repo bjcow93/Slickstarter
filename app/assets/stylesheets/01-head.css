@@ -24,6 +24,18 @@
   padding-right: 50px;
 }
 
+.slick {
+  position: absolute;
+  left: 43.5%;
+  background-image: url(slick.png);
+  width: 200px;
+  height: 20px;
+  background-size: 175px;
+  z-index: 2;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
 .left {
   display: flex;
 }
@@ -91,8 +103,8 @@
   z-index: 11;
   position: absolute;
   display: wrap;
-  right: 20px;
-  top: 75px;
+  right: 18px;
+  top: 78px;
 }
 
 .modal-section-a {

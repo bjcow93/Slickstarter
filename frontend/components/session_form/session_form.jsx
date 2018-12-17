@@ -50,13 +50,12 @@ class SessionForm extends React.Component {
   }
 
 
-
   render() {
     if (this.props.formType === 'Sign up') {
       return (
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
-            <div className="form-above">Have an account?&nbsp;&nbsp;<p>{this.props.navLink}</p></div>
+            <div className="form-above">Have an account?&nbsp;&nbsp;<p onClick={this.props.resetErrors}>{this.props.navLink}</p></div>
             <fieldset className="form-fieldset">
               <h1>{this.props.formType}</h1>
               <br />
@@ -132,7 +131,7 @@ class SessionForm extends React.Component {
                 </div>
               </div>
             </fieldset>
-            <div className="form-below">New to Slickstarter?&nbsp;&nbsp;<p>{this.props.navLink}</p></div>
+            <div className="form-below">New to Slickstarter?&nbsp;&nbsp;<p onClick={this.props.resetErrors}>{this.props.navLink}</p></div>
           </form>
         </div>
       );

@@ -6,7 +6,7 @@ const Navbar = ({ currentUser, openMod, closeModal }) => {
   const sessionLinks = () => (
     <header className="head">
       <div className="left"><p><Link to="/">Explore</Link></p>&nbsp;   &nbsp;<p><Link to="/">Start a project</Link></p></div>
-      <Link className="title" to="/">SLICKSTARTER</Link>
+      <Link className="slick" to="/"></Link>
       <div className="right">
         <div className="search-button"><Link to="/">Search</Link>
           <Link className="search-icon" to="/"></Link>
@@ -22,7 +22,7 @@ const Navbar = ({ currentUser, openMod, closeModal }) => {
   const personalGreeting = () => (
     <header className="head">
       <div className="left"><p><Link to="/">Explore</Link></p>&nbsp;   &nbsp;<p><Link to="/">Start a project</Link></p></div>
-      <Link className="title" to="/">SLICKSTARTER</Link>
+      <Link className="slick" to="/"></Link>
       <div className="right">
         <div className="search-button">
           <Link to="/">Search</Link>
