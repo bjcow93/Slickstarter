@@ -4,12 +4,16 @@ import React, { Component } from 'react';
 class ProjectShow extends Component {
   componentDidMount() {
     this.props.fetchProject(this.props.match.params.projectId);
+
+    window.scrollTo(0, 0);
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.projectId !== this.props.match.params.projectId) {
       this.props.fetchProject(this.props.match.params.projectId);
     }
+
+    window.scrollTo(0,0);
   }
 
   render() {

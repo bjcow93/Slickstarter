@@ -14,26 +14,15 @@
   color: green;
 }
 
-.title {
-  position: absolute;
-  left: 43%;
-  font-size: 25px;
-  font-weight: bold;
-  font-family: "Courier";
-  color: rgb(14, 80, 58);
-  padding-right: 50px;
-}
-
 .slick {
-  position: absolute;
-  left: 43.5%;
   background-image: image-url('slick.png');
   width: 200px;
-  height: 20px;
-  background-size: 175px;
-  z-index: 2;
+  height: 23px;
+  background-size: 200px;
   background-repeat: no-repeat;
   object-fit: cover;
+  background-size: contain;
+
 }
 
 .left {
@@ -41,9 +30,6 @@
 }
 
 .search-button {
-  position: absolute;
-  right: 80px;
-  top: 21px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -80,6 +66,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   object-fit: cover;
+  margin: 9px;
 }
 
 .right {
@@ -124,7 +111,6 @@
   font-size: 14px;
   padding: 25px;
   height: 16px;
-  /* transform: translate(-50%, -50%); */
 }
 
 .header-button:hover {

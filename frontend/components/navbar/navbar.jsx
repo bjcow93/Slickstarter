@@ -6,12 +6,13 @@ const Navbar = ({ currentUser, openMod, closeModal }) => {
   const sessionLinks = () => (
     <header className="head">
       <div className="left"><p><Link to="/">Explore</Link></p>&nbsp;   &nbsp;<p><Link to="/">Start a project</Link></p></div>
-      <Link className="slick" to="/"></Link>
+      <div className="slick"><Link to="/"></Link></div>
       <div className="right">
-        <div className="search-button"><Link to="/">Search</Link>
+        <div className="search-button">
+          <Link to="/">Search</Link>
           <Link className="search-icon" to="/"></Link>
         </div>
-        &nbsp;    &nbsp;
+        &nbsp;   &nbsp;
         <p className="signin">
           <Link to="/login">Sign in</Link>
         </p>
@@ -22,7 +23,7 @@ const Navbar = ({ currentUser, openMod, closeModal }) => {
   const personalGreeting = () => (
     <header className="head">
       <div className="left"><p><Link to="/">Explore</Link></p>&nbsp;   &nbsp;<p><Link to="/">Start a project</Link></p></div>
-      <Link className="slick" to="/"></Link>
+      <div className="slick"><Link to="/"></Link></div>      
       <div className="right">
         <div className="search-button">
           <Link to="/">Search</Link>

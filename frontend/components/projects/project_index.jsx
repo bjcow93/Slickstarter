@@ -24,7 +24,7 @@ class ProjectIndex extends Component {
   }
 
   render() {
-    const { projects } = this.props;
+    // const { projects } = this.props;
 
     return (
       <section className="homepage">
@@ -48,11 +48,12 @@ class ProjectIndex extends Component {
             </div>
             <br />
             <div className="featured-description">{this.grabProject(1, 'obj').description}</div>
+            <br />
+            <div className="author">By&nbsp;<p className="author-link">Author Name</p></div>
           </div>
           <div className="recommended">
             <h2>RECOMMENDED</h2>
             <div className="rec-container">
-              {/* <div className="rec-img"></div> */}
               <Link className="rec-img" to={`/projects/${this.grabProject(2, 'obj').id}`}></Link>
               {this.grabProject(2)}
             </div>
@@ -64,6 +65,9 @@ class ProjectIndex extends Component {
               <Link className="rec-img" to={`/projects/${this.grabProject(4, 'obj').id}`}></Link>
               {this.grabProject(4)}
             </div>
+            <br />
+            <br />
+            <div><Link className="more-projects" to={`/`}>View more projects</Link></div>
           </div>
           </div>
         <div className="favorites">
