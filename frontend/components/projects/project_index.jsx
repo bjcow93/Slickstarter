@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import ProjectIndexItem from './project_index_item';
 // import ProjectFormContainer from './project_form_container';
@@ -9,40 +10,62 @@ class ProjectIndex extends Component {
     this.props.fetchProjects();
   }
 
-  // grabProject(n) {
-  //   const { projects } = this.props;
-  //   if (projects.length === 0) {
-  //     return { id: 1, user_id: 1, title: "", description: "", funding_goal: 0, start_date: "", end_date: "" };
-  //   } else {
-  //     return projects[n-1];
-  //   }
-  // }
 
-  grabProject(n) {
+  grabProject(n, type='link') {
     const { projects } = this.props;
 
     if (projects.length === 0 || projects[n-1] === undefined) {
       return <div></div>
-    } else {
+    } else if (type === 'link') {
       return <ProjectIndexItem key={projects[n-1].id} project={projects[n-1]} />
+    } else if (type === 'obj') {
+      return projects[n - 1]
     }
   }
 
   render() {
     const { projects } = this.props;
+
     return (
       <section className="homepage">
-        <div className="categories">Categories Banner</div>
-        <div className="featured">{this.grabProject(1)}</div>
-        <div className="recommended">
-          {this.grabProject(2)}
-          {this.grabProject(3)}
-          {this.grabProject(4)}
-          {/* <ProjectIndexItem key={this.grabProject(2).id} project={this.grabProject(2)} />
-          <ProjectIndexItem key={this.grabProject(3).id} project={this.grabProject(3)} />
-          <ProjectIndexItem key={this.grabProject(4).id} project={this.grabProject(4)} /> */}
-          {/* {projects.map(project => <ProjectIndexItem key={project.id} project={project} />)} */}
+        <div className="categories">
+          <div><Link to={`/`}>Arts</Link></div>
+          <div><Link to={`/`}>Comics & Illustration</Link></div>
+          <div><Link to={`/`}>Design & Tech</Link></div>
+          <div><Link to={`/`}>Film</Link></div>
+          <div><Link to={`/`}>Food & Craft</Link></div>
+          <div><Link to={`/`}>Games</Link></div>
+          <div><Link to={`/`}>Music</Link></div>
+          <div><Link to={`/`}>Publishing</Link></div>
         </div>
+        <div className="middle">
+          <div className="featured">
+            <h2>FEATURED PROJECT</h2>
+            <br />
+            <Link className="featured-img" to={`/projects/${this.grabProject(1, 'obj').id}`}></Link>
+            <div className="featured-title">
+              <Link to={`/projects/${this.grabProject(1, 'obj').id}`}>{this.grabProject(1, 'obj').title}</Link>
+            </div>
+            <br />
+            <div className="featured-description">{this.grabProject(1, 'obj').description}</div>
+          </div>
+          <div className="recommended">
+            <h2>RECOMMENDED</h2>
+            <div className="rec-container">
+              {/* <div className="rec-img"></div> */}
+              <Link className="rec-img" to={`/projects/${this.grabProject(2, 'obj').id}`}></Link>
+              {this.grabProject(2)}
+            </div>
+            <div className="rec-container">
+              <Link className="rec-img" to={`/projects/${this.grabProject(3, 'obj').id}`}></Link>
+                {this.grabProject(3)}
+            </div>
+            <div className="rec-container">
+              <Link className="rec-img" to={`/projects/${this.grabProject(4, 'obj').id}`}></Link>
+              {this.grabProject(4)}
+            </div>
+          </div>
+          </div>
         <div className="favorites">
           {this.grabProject(5)}
           {this.grabProject(6)}

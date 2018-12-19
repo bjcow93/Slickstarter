@@ -1,0 +1,163 @@
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  height: 60px;
+  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+  color: gray;
+}
+
+.categories div {
+  margin: 20px;
+}
+
+.categories a {
+  width: 10%;
+}
+
+.categories  div:hover {
+  color: green;
+  text-decoration: underline;
+}
+
+.middle {
+  padding-top: 24px;
+  padding-bottom: 60px;
+  display: flex;
+  height: 588px;
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.favorites {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 525px;
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.favorites div {
+  margin: 20px;
+  padding: 10px;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured {
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  flex-direction: column;
+  width: 49.5%;
+  border-right: 1px solid rgb(224, 224, 224);
+  height: 100%;
+  margin-top: 0px;
+  margin-left: 95px;
+  padding-top: 30px;
+}
+
+.recommended {
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
+  height: 80%;
+  width: 43%;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-left: 60px;
+}
+
+.recommended h2 {
+  font-size: 13px;
+  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+  color: rgb(100, 100, 100);
+  font-weight: 400;
+}
+.featured h2 {
+  font-size: 13px;
+  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+  color: rgb(100, 100, 100);
+  font-weight: 400;
+}
+
+.featured-img {
+  background-image: image-url('temp.png');
+  width: 91.5%;
+  height: 65%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.project-index-item {
+  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.project-index-item div {
+  height: 22px;
+}
+
+.featured-title {
+  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+  font-size: 28px;
+}
+
+.featured-title:hover {
+  color: green;
+  text-decoration: underline;
+}
+
+.featured-description {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.rec-container {
+  display: flex;
+  align-items: center;
+  height: 125px;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  width: 83.5%;
+}
+
+.rec-img {
+  background-image: image-url('temp2.png');
+  width: 35%;
+  height: 72%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.link {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.link:hover {
+  color: green;
+  text-decoration: underline;
+}
+
+.funded {
+  font-size: 12px;
+  color: green;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.author {
+  font-size: 11.5px;
+  color: rgb(107, 107, 107);
+  display: flex;
+  align-items: center;
+}

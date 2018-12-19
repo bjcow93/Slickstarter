@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const ProjectIndexItem = ({ project }) => (
   <div className="project-index-item">
-    <Link to={`/projects/${project.id}`}>
-      {/* <span>{project.id}</span> */}
-      {/* <img src={pokemon.image_url} alt={pokemon.name} /> */}
-      <span>{project.title}</span>
-    </Link>
+    <div><Link className="link" to={`/projects/${project.id}`}>
+      {project.title}
+    </Link></div>
+    <div className="funded">800% funded</div>
+    <div className="author">By Author Name</div>
   </div>
 );
 

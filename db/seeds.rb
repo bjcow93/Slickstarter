@@ -9,7 +9,7 @@ User.delete_all
 User.create(email: 'ben@email.com', name: "Ben", password: "password")
 
 Project.delete_all
-Project.create(user_id: 1, title: "Project1", description: "P1 Description", funding_goal: 10000, start_date: 'Fri, 14 Dec 2018 00:43:19 UTC +00:00', end_date: 'Fri, 14 Mar 2018 00:43:19 UTC +00:00')
+Project.create(user_id: 1, title: "Project1", description: "Pulo NDJ is an encounter between talented artists from Chad & Cameroon, globe-trotting Nickodemus and HAPE Collective's own DJ Buosis", funding_goal: 10000, start_date: 'Fri, 14 Dec 2018 00:43:19 UTC +00:00', end_date: 'Fri, 14 Mar 2018 00:43:19 UTC +00:00')
 Project.create(user_id: 1, title: "Project2", description: "P2 Description", funding_goal: 20000, start_date: 'Fri, 14 Dec 2018 00:43:19 UTC +00:00', end_date: 'Fri, 14 Mar 2018 00:43:19 UTC +00:00')
 Project.create(user_id: 1, title: "Project3", description: "P3 Description", funding_goal: 30000, start_date: 'Fri, 14 Dec 2018 00:43:19 UTC +00:00', end_date: 'Fri, 14 Mar 2018 00:43:19 UTC +00:00')
 Project.create(user_id: 1, title: "Project4", description: "P4 Description", funding_goal: 40000, start_date: 'Fri, 14 Dec 2018 00:43:19 UTC +00:00', end_date: 'Fri, 14 Mar 2018 00:43:19 UTC +00:00')
