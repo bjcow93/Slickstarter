@@ -1,0 +1,18 @@
+.project-field {
+  border: 1px solid gray;
+  margin: 10px;
+}
+
+.new-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-submit-button {
+  background: rgb(27, 161, 116);
+  color: white;
+  display: flex;
+  justify-content: center;
+}

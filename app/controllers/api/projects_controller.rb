@@ -2,19 +2,18 @@ class Api::ProjectsController < ApplicationController
   before_action :require_logged_in, only: [:create]
 
 
-  def new
-    @project = Project.new;
-    render :new
-  end 
+  # def new
+  #   @project = Project.new();
+  # end 
 
   def create
     @project = Project.new(project_params)
     @project.user_id = current_user.id;
-
+    
     if @project.save
       render "/api/projects/show"
-    # else
-    #   render json: @projects.errors.full_messages
+    else
+      render json: @project.errors.full_messages
     end
    
   end
@@ -25,7 +24,7 @@ class Api::ProjectsController < ApplicationController
   end 
 
    def show
-    # sleep 0.5
+    sleep 0.5
     @project = Project.find(params[:id])
   end
   

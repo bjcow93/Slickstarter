@@ -26,6 +26,7 @@ class ProjectShow extends Component {
         <div>
           <h2>{project.title}</h2>
           <div>Description: {project.description}</div>
+          <div className="test-img"></div>
         </div>
       </section>
     );

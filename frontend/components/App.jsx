@@ -7,17 +7,18 @@ import { Route, Switch } from 'react-router-dom';
 import Modal from './modal/modal';
 import ProjectIndexContainer from './projects/project_index_container';
 import ProjectShowContainer from './projects/project_show_container';
-
+import ProjectFormContainer from './projects/project_form_container';
 const App = () => (
   <div>
     <Modal />
     <NavbarContainer />
     <Route exact path="/" component={ProjectIndexContainer} />
-    <Route path="/projects/:projectId" component={ProjectShowContainer} />
+    {/* <Route path="/projects/:projectId" component={ProjectShowContainer} /> */}
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      {/* <Route exact path="/" component={SearchContainer} /> */}
+      <ProtectedRoute exact path="/projects/new" component={ProjectFormContainer} />
+      <Route path="/projects/:projectId" component={ProjectShowContainer} />
     </Switch>
   </div>
 );
