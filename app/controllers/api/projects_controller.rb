@@ -9,7 +9,7 @@ class Api::ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     @project.user_id = current_user.id;
-    
+
     if @project.save
       render "/api/projects/show"
     else
@@ -24,7 +24,7 @@ class Api::ProjectsController < ApplicationController
   end 
 
    def show
-    sleep 0.5
+    # sleep 0.5
     @project = Project.find(params[:id])
   end
   

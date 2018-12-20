@@ -7,7 +7,7 @@ class ProjectForm extends React.Component {
 
     this.state = {
       title: "",
-      description: "some shit",
+      description: "",
       funding_goal: '',
       start_date: '',
       end_date: ''
