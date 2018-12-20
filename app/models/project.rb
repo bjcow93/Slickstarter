@@ -4,6 +4,8 @@ validates :description, :funding_goal, :start_date, :end_date, presence: true
 
 belongs_to :user
 
+has_one_attached :image
+
 # has_many :backings
 # has_many :rewards
 # has_many :projects_categories
