@@ -64,75 +64,89 @@ class ProjectForm extends React.Component {
 
 
     return (
-      <div>
-      <form className="new-form" onSubmit={this.handleSubmit}>
-        <label>title</label>
-        <input
-          type="text"
-          value={title}
-          onChange={this.update('title')}
-          className="project-field"
-        />
-
+      <div className="main-create-section">
+      <form className="create-project-form" onSubmit={this.handleSubmit}>
+        <h1 className="create-main-header">Let's get started!</h1>
         <br />
-
-        <label>description</label>
-        <textarea
-          value={description}
-          onChange={this.update('description')}
-          className="project-field"
-        />
-
-        <br />
-
-        <label>funding goal</label>
-        <input
-          min="0"
-          type="number"
-          value={funding_goal}
-          onChange={this.update('funding_goal')}
-          className="project-field"
-        />
-
-        <br />
-
-        <label>start date</label>
-        <input
-          type="datetime-local"
-          value={start_date}
-          onChange={this.update('start_date')}
-          className="project-field"
-        />
-
-        <br />
-
-        <label>end date</label>
-        <input
-          type="datetime-local"
-          value={end_date}
-          onChange={this.update('end_date')}
-          className="project-field"
-        />
-
-        <br />
-
-        <div className="button-holder">
-          <h3>Image preview </h3>
-          {preview}
-          <h3 className="button-holder">Add a Picture</h3>
-          <input type="file" className="new-bench-button"
-            onChange={this.handleFile.bind(this)} />
+        <div className="create-input-field">
+          <h1 className="create-headers">Describe what you’ll be creating.</h1>
+          <h2 className="create-below-headers">Pick a project title to display to the community.</h2>
+          <input
+            type="text"
+            value={title}
+            onChange={this.update('title')}
+            className="create-project-field"
+            placeholder="Select your title"
+          />
         </div>
 
         <br />
+        <div className="create-input-field">
+          <h1 className="create-headers">Describe what you’ll be creating.</h1>
+            <h2 className="create-below-headers">You can edit this later.</h2>
+          <textarea
+            value={description}
+            onChange={this.update('description')}
+            className="create-project-field"
+            placeholder="Type a description here."
+            rows="5"
+          />
+        </div>
+        <br />
 
-        <div className="create-submit-button">
+        <div className="create-input-field">
+          <h1 className="create-headers">Let's set a goal for the project.</h1>
+          <h2 className="create-below-headers">Pick a project title to display to the community.</h2>
+          <input
+            min="0"
+            type="number"
+            value={funding_goal}
+            onChange={this.update('funding_goal')}
+            className="create-project-field"
+            placeholder="Enter a funding goal."
+          />
+        </div>
+        <br />
+
+        <div className="create-input-field">
+          <h1 className="create-headers">Choose a duration for the project.</h1>
+          <h2 className="create-below-headers">Choose your project's timeframe.</h2>
+          <label>Start Date</label>
+          <input
+            type="datetime-local"
+            value={start_date}
+            onChange={this.update('start_date')}
+            className="create-project-field"
+          />
+        </div>
+        <br />
+        <div className="create-input-field">
+          <label>End Date</label>
+          <input
+            type="datetime-local"
+            value={end_date}
+            onChange={this.update('end_date')}
+            className="create-project-field"
+          />
+        </div>
+        <br />
+
+      <div className="create-input-field">
+          <h1 className="create-headers">Finally, select an image for your project.</h1>
+          <h2 className="create-below-headers">And don’t worry, you can edit this later, too!</h2>
+          {preview}
+          <div className="button-holder">
+          <input type="file" className="new-image-button"
+            onChange={this.handleFile.bind(this)} />
+          </div>
+      </div>
+
+        <br />
           <input
             type="submit"
             value="Create Project"
-            className="new-submit-button"
+            className="create-submit-button"
           />
-        </div>
       </form>
       </div>
     )

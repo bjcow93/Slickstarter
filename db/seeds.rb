@@ -16,18 +16,17 @@ user = User.create(email: 'ben@email.com', name: "Ben", password: "password")
 
 
 
-
 Project.delete_all
 Project.create!(user_id: 1, title: "Transforming Tea Waste Into Beautiful Homeware", description: "Changing how we recycle. Bringing the organic into design. This collection transforms tea into beautiful homeware.", funding_goal: 3788, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 29 Dec 2018 01:00:00 UTC +00:00')
-Project.create(user_id: 2, title: "Tainted Grail: The Fall of Avalon", description: "Adventure, survival co-op Board Game set in unique grim world inspired by Arthurian Legends. Unforgettable experience for 1-4 players", funding_goal: 50517, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 29 Dec 2018 01:00:00 UTC +00:00')
-Project.create(user_id: 3, title: "RADIFY", description: "RADIFY the Graphic Novel", funding_goal: 7600, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 29 Dec 2018 01:00:00 UTC +00:00')
-Project.create(user_id: 4, title: "Malkyrs - The interactive card game", description: "Malkyrs is an interactive trading card game. Fight your friends online with real cards & upgrade them on PC, MAC and NINTENDO SWITCH!", funding_goal: 56929, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 29 Dec 2018 01:00:00 UTC +00:00')
+Project.create(user_id: 2, title: "Tainted Grail: The Fall of Avalon", description: "Adventure, survival co-op Board Game set in unique grim world inspired by Arthurian Legends. Unforgettable experience for 1-4 players", funding_goal: 50517, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 29 Jan 2019 01:00:00 UTC +00:00')
+Project.create(user_id: 3, title: "RADIFY", description: "RADIFY the Graphic Novel", funding_goal: 7600, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 31 Dec 2018 01:00:00 UTC +00:00')
+Project.create(user_id: 4, title: "Malkyrs - The interactive card game", description: "Malkyrs is an interactive trading card game. Fight your friends online with real cards & upgrade them on PC, MAC and NINTENDO SWITCH!", funding_goal: 56929, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 15 Feb 2019 01:00:00 UTC +00:00')
 Project.create(user_id: 1, title: "Project5", description: "P5 Description", funding_goal: 50000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 29 Dec 2018 01:00:00 UTC +00:00')
-Project.create(user_id: 1, title: "Project6", description: "P6 Description", funding_goal: 60000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 29 Dec 2018 01:00:00 UTC +00:00')
-Project.create(user_id: 2, title: "Project7", description: "P7 Description", funding_goal: 70000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 29 Dec 2018 01:00:00 UTC +00:00')
-Project.create(user_id: 3, title: "Project8", description: "P8 Description", funding_goal: 80000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 29 Dec 2018 01:00:00 UTC +00:00')
+Project.create(user_id: 1, title: "Project6", description: "P6 Description", funding_goal: 60000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 29 Jan 2018 01:00:00 UTC +00:00')
+Project.create(user_id: 2, title: "Project7", description: "P7 Description", funding_goal: 70000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 31 Dec 2018 01:00:00 UTC +00:00')
+Project.create(user_id: 3, title: "Project8", description: "P8 Description", funding_goal: 80000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 15 Feb 2018 01:00:00 UTC +00:00')
 Project.create(user_id: 3, title: "Project9", description: "P9 Description", funding_goal: 90000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 29 Dec 2018 01:00:00 UTC +00:00')
-Project.create(user_id: 1, title: "Project10", description: "P10 Description", funding_goal: 100000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 29 Dec 2018 01:00:00 UTC +00:00')
+Project.create(user_id: 1, title: "Project10", description: "P10 Description", funding_goal: 100000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 16 Mar 2018 01:00:00 UTC +00:00')
 
 
   Project.all.each do |el|

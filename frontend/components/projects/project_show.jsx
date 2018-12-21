@@ -16,18 +16,27 @@ class ProjectShow extends Component {
     window.scrollTo(0,0);
   }
 
+  numCreated() {
+    const { project } = this.props;
+    if (!project || !project.user.projects) return null;
+
+    if (project.user.projects.length === 1) {
+      return "First";
+    } else {
+      return project.user.projects.length;
+    }
+  }
+
   render() {
     const { project } = this.props;
-    
     if (!project) return null;
     
     function getRandomArbitrary(min, max) {
       return Math.random() * (max - min) + min;
     }
-
     let pledged = `$${Math.floor(getRandomArbitrary(100, 999))},${Math.floor(getRandomArbitrary(100,999))}`
     let backers = `${Math.floor(getRandomArbitrary(0, 50))},${Math.floor(getRandomArbitrary(100, 999))}`
-    let days_to_go = Math.floor(((new Date(project.end_date)) - (new Date(project.start_date))) / (1000 * 3600 * 24));
+    let days_to_go = Math.floor(((new Date(project.end_date)) - (new Date())) / (1000 * 3600 * 24));
 
     return (
       <section className="project-show">
@@ -35,8 +44,8 @@ class ProjectShow extends Component {
           <div className="show-top">
             <div className="show-top-left">
               <img className="show-user-icon" src={window.usericonUrl} />
-              <div className="show-creator"><p>By</p>&nbsp;<p className="show-creator-link">Author Name</p></div>
-              <div className="show-total-created">X created</div>
+              <div className="show-creator"><p>By</p>&nbsp;<p className="show-creator-link">{project.user.name}</p></div>
+              <div className="show-total-created">{this.numCreated()} created</div>
               <div className="follow-creator-button">Follow Creator</div>
             </div>
             <div className="show-top-right">

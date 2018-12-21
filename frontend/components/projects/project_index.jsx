@@ -25,11 +25,9 @@ class ProjectIndex extends Component {
 
   render() {
     const { projects } = this.props;
-
-    if (projects === []) return null;
-    console.log(projects)
     // debugger
-
+    if (projects.length === 0) return null;
+  
     return (
       <section className="homepage">
         <div className="categories">
@@ -54,7 +52,8 @@ class ProjectIndex extends Component {
             <br />
             <div className="featured-description">{this.grabProject(1, 'obj').description}</div>
             <br />
-            <div className="author">By&nbsp;<p className="author-link">Author Name</p></div>
+            <div className="author">By&nbsp;<p className="author-link">{projects[0].user.name}</p>
+            </div>
           </div>
           <div className="recommended">
             <h2>RECOMMENDED</h2>

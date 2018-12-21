@@ -7,7 +7,7 @@ const ProjectIndexItem = ({ project }) => (
       {project.title}
     </Link></div>
     <div className="funded">800% funded</div>
-    <div className="author">By&nbsp;<p className="author-link">Author Name</p></div>
+    <div className="author">By&nbsp;<p className="author-link">{project.user.name}</p></div>
   </div>
 );
 

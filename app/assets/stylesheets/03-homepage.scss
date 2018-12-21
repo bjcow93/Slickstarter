@@ -4,8 +4,9 @@
   align-items: center;
   border-bottom: 1px solid rgb(224, 224, 224);
   height: 60px;
-  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
   color: gray;
+  font-family: Helvetica;
+  font-weight: 300;
 }
 
 .categories div {
@@ -124,6 +125,7 @@
   font-size: 18px;
   font-weight: 100;
   margin-bottom: 10px;
+  width: 80%;
 }
 
 .rec-container {
