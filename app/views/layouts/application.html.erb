@@ -6,7 +6,10 @@
     <%= csp_meta_tag %>
 
     <script type="text/javascript">
-      window.images = {}
+      window.usericonUrl = "<%= image_url('usericon.png') %>"
+    </script>
+    <script type="text/javascript">
+      window.heartUrl = "<%= image_url('heart.png') %>"
     </script>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>

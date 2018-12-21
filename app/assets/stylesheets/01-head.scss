@@ -16,16 +16,19 @@
 
 .slick {
   background-image: image-url('slick.png');
-  width: 200px;
+  width: 180px;
   height: 23px;
   background-size: 200px;
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: contain;
+  position: relative;
+  right: 10px;
 }
 
 .left {
   display: flex;
+  // margin-right: 15px;
 }
 
 .search-button {

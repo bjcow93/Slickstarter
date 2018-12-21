@@ -24,7 +24,11 @@ class ProjectIndex extends Component {
   }
 
   render() {
-    // const { projects } = this.props;
+    const { projects } = this.props;
+
+    if (projects === []) return null;
+    console.log(projects)
+    // debugger
 
     return (
       <section className="homepage">
@@ -42,10 +46,11 @@ class ProjectIndex extends Component {
           <div className="featured">
             <h2>FEATURED PROJECT</h2>
             <br />
-            <Link className="featured-img" to={`/projects/${this.grabProject(1, 'obj').id}`}></Link>
-            <div className="featured-title">
-              <Link to={`/projects/${this.grabProject(1, 'obj').id}`}>{this.grabProject(1, 'obj').title}</Link>
-            </div>
+            <Link className="underline-main" to={`/projects/${this.grabProject(1, 'obj').id}`}>
+              <img className="featured-img" src={this.grabProject(1, 'obj').image_url}></img>
+              <br />
+              <div className="featured-title">{this.grabProject(1, 'obj').title}</div>
+            </Link>
             <br />
             <div className="featured-description">{this.grabProject(1, 'obj').description}</div>
             <br />
@@ -54,15 +59,15 @@ class ProjectIndex extends Component {
           <div className="recommended">
             <h2>RECOMMENDED</h2>
             <div className="rec-container">
-              <Link className="rec-img" to={`/projects/${this.grabProject(2, 'obj').id}`}></Link>
+              <Link className="rec-i" to={`/projects/${this.grabProject(2, 'obj').id}`}><img className="rec-img" src={this.grabProject(2, 'obj').image_url}></img></Link>
               {this.grabProject(2)}
             </div>
             <div className="rec-container">
-              <Link className="rec-img" to={`/projects/${this.grabProject(3, 'obj').id}`}></Link>
+              <Link className="rec-i" to={`/projects/${this.grabProject(3, 'obj').id}`}><img className="rec-img" src={this.grabProject(3, 'obj').image_url}></img></Link>
                 {this.grabProject(3)}
             </div>
             <div className="rec-container">
-              <Link className="rec-img" to={`/projects/${this.grabProject(4, 'obj').id}`}></Link>
+              <Link className="rec-i" to={`/projects/${this.grabProject(4, 'obj').id}`}><img className="rec-img" src={this.grabProject(4, 'obj').image_url}></img></Link>
               {this.grabProject(4)}
             </div>
             <br />

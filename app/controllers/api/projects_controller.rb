@@ -24,7 +24,6 @@ class Api::ProjectsController < ApplicationController
   end 
 
    def show
-    # sleep 0.5
     @project = Project.find(params[:id])
   end
   

@@ -90,6 +90,8 @@
   color: white;
   display: flex;
   justify-content: center;
+  transition: transform .3s ease-in-out, background-color .2s ease-in-out, border .2s ease-in-out;
+
 }
 
 .session-submit {
@@ -98,12 +100,13 @@
   justify-content: center;
   width: 100%;
   border: 1px solid rgb(27, 161, 116);
+  transition: transform .3s ease-in-out, background-color .2s ease-in-out, border .2s ease-in-out;
 }
 
 .submit:hover {
-  transition: .5s ease;
+  transform: translate3d(0px, -1px, 0px);
   background: rgb(18, 104, 75);
-  bottom: 1px;
+  border-color: rgb(18, 104, 75);
 }
 
 .errors {

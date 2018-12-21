@@ -13,20 +13,11 @@ export const fetchProject = id => (
 );
 
 export const createProject = project => (
-  console.log(project),
   $.ajax({
     method: 'POST',
     url: 'api/projects',
-    data: {project}
+    data: project,
+    contentType: false,
+    processData: false
   })
 );
-
-// export const createProject = (project) => {
-//   // pokemon.moves = Object.keys(pokemon.moves).map(k => pokemon.moves[k]);
-
-//   return $.ajax({
-//     method: 'POST',
-//     url: 'api/projects/',
-//     data: { project }
-//   });
-// };

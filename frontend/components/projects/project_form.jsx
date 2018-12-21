@@ -10,18 +10,12 @@ class ProjectForm extends React.Component {
       description: "",
       funding_goal: '',
       start_date: '',
-      end_date: ''
+      end_date: '',
+      photoFile: null,
+      photoUrl: null
     };
-    // this.coords = { lat: props.lat, lng: props.lng };
-    // this.state = {
-    //   description: '',
-    //   seating: 2,
-    //   photoFile: null,
-    //   photoUrl: null
-    // };
-    // this.handleSubmit = this.handleSubmit.bind(this);
-    // this.navigateToSearch = this.navigateToSearch.bind(this);
-    // this.handleFile = this.handleFile.bind(this);
+
+    this.handleFile = this.handleFile.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -31,10 +25,33 @@ class ProjectForm extends React.Component {
     });
   }
 
+  handleFile(e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({ photoFile: file, photoUrl: fileReader.result });
+    };
+    if (file) {
+      fileReader.readAsDataURL(file);
+    }
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const project = Object.assign({}, this.state);
-    this.props.createProject(project).then(
+    const { title, description, funding_goal, start_date, end_date, photoFile } = project;
+    const formData = new FormData();
+    formData.append('project[title]', title);
+    formData.append('project[description]', description);
+    formData.append('project[funding_goal]', funding_goal);
+    formData.append('project[start_date]', start_date);
+    formData.append('project[end_date]', end_date);
+
+    if (this.state.photoFile) {
+      formData.append('project[image]', photoFile);
+    } 
+
+    this.props.createProject(formData).then(
       res => {
         this.props.history.push(`/projects/${res.payload.project.id}/`);
       }
@@ -42,7 +59,9 @@ class ProjectForm extends React.Component {
   }
 
   render() {
-    const { title, description, funding_goal, start_date, end_date } = this.state;
+    const { title, description, funding_goal, start_date, end_date, photoUrl } = this.state;
+    const preview = photoUrl ? <img height="200px" width="200px" src={photoUrl} /> : null;
+
 
     return (
       <div>
@@ -54,14 +73,18 @@ class ProjectForm extends React.Component {
           onChange={this.update('title')}
           className="project-field"
         />
+
         <br />
+
         <label>description</label>
         <textarea
           value={description}
           onChange={this.update('description')}
           className="project-field"
         />
+
         <br />
+
         <label>funding goal</label>
         <input
           min="0"
@@ -70,30 +93,46 @@ class ProjectForm extends React.Component {
           onChange={this.update('funding_goal')}
           className="project-field"
         />
+
         <br />
+
         <label>start date</label>
         <input
-          type="date"
+          type="datetime-local"
           value={start_date}
           onChange={this.update('start_date')}
           className="project-field"
         />
+
         <br />
+
         <label>end date</label>
         <input
-          type="date"
+          type="datetime-local"
           value={end_date}
           onChange={this.update('end_date')}
           className="project-field"
         />
+
         <br />
-          <div className="create-submit-button">
-            <input
-              type="submit"
-              value="Create Project"
-              className="new-submit-button"
-            />
-          </div>
+
+        <div className="button-holder">
+          <h3>Image preview </h3>
+          {preview}
+          <h3 className="button-holder">Add a Picture</h3>
+          <input type="file" className="new-bench-button"
+            onChange={this.handleFile.bind(this)} />
+        </div>
+
+        <br />
+
+        <div className="create-submit-button">
+          <input
+            type="submit"
+            value="Create Project"
+            className="new-submit-button"
+          />
+        </div>
       </form>
       </div>
     )

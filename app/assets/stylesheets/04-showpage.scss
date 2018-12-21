@@ -1,8 +1,176 @@
 .test-img {
-  background-image: image-url('temp2.png');
+  // background-image: image-url('temp2.png');
   width: 500px;
-  height: 500px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  object-fit: cover;
+  // height: 500px;
+  // background-size: contain;
+  // background-repeat: no-repeat;
+  // object-fit: cover;
+}
+
+.project-show {
+  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+  background: rgb(250, 250, 250);
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+.show-top {
+  display: flex;
+  height: 255px;
+}
+
+.show-top-left {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100%;
+  width: 20%;
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.show-user-icon {
+  margin: 5px;
+  width: 40px;
+  position: relative;
+  bottom: 8px;
+}
+
+.show-creator {
+  margin-top: 10px;
+  display: flex;
+  font-size: 14px;
+  position: relative;
+  bottom: 2px;
+}
+
+.show-creator-link:hover {
+  cursor: pointer;
+}
+
+.show-total-created {
+  margin: 5px;
+  font-size: 14px;
+  color: rgb(131, 131, 131);
+
+}
+
+.follow-creator-button {
+  background-color: rgb(216, 216, 216);
+  padding: 8px 10px 8px 10px;
+  color: black;
+  font-size: 12px;
+  width: 80px;
+  position: relative;
+  top: 8px;
+}
+
+.follow-creator-button:hover {
+  background-color: rgb(134, 134, 134);
+  position: relative;
+  
+}
+
+.show-top-right {
+  height: 80%;
+  // width: 6
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.show-title {
+  font-size: 37px;
+  width: 65%;
+}
+
+.show-desc {
+  color: rgb(110, 110, 110);
+  font-size: 18px;
+  width: 65%;
+}
+
+.show-bottom {
+  height: 548px;
+  display: flex;
+}
+
+.show-bottom-left {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 63.5%;
+}
+
+.show-bottom-right {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 30.5%;
+}
+
+.show-bottom-right p {
+  font-size: 14px;
+  color: rgb(97, 97, 97);
+}
+
+.backing-button {
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  background-color: rgb(27, 161, 116);
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  transition: transform .3s ease-in-out, background-color .2s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.backing-button:hover {
+  transform: translate3d(0px, -1px, 0px);
+  background: rgb(18, 104, 75);
+  cursor: pointer;
+  box-shadow: 0px 2px 2px .1px rgb(207, 207, 207);
+}
+
+.progress-bar {
+  border-top: 3px solid rgb(21, 124, 90);
+}
+
+.pledged {
+  font-size: 23px;
+  color: rgb(21, 124, 90);
+}
+
+.backers {
+  font-size: 23px;
+}
+
+.days-to-go {
+  font-size: 23px;
+}
+
+.reminder-button {
+  border: 1px solid lightgray;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  width: 49%;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  transition: transform .3s ease-in-out, border .3s ease-in-out, box-shadow .3s ease-in-out;
+  font-size: 14px;
+}
+
+.reminder-button:hover {
+  transform: translate3d(0px, -1px, 0px);
+  cursor: pointer;
+  border: 1px solid black;
+  box-shadow: 0px 2px 2px .1px rgb(207, 207, 207);
+}
+
+.heart-icon {
+  width: 18px;
+  margin-right: 4px;
 }

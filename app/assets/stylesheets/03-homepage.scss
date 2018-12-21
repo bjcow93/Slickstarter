@@ -87,17 +87,22 @@
 .featured-img {
   background-image: image-url('temp.png');
   width: 91.5%;
-  height: 65%;
+  // height: 65%;
   background-size: contain;
   background-repeat: no-repeat;
   object-fit: cover;
+}
+
+.underline-main:hover {
+  text-decoration: underline;
+  color: green;
 }
 
 .project-index-item {
   font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
   display: flex;
   flex-direction: column;
-  margin-left: 15px;
+  margin-left: 35px;
 }
 
 .project-index-item div {
@@ -130,14 +135,18 @@
   margin-bottom: 3px;
 }
 
-.rec-img {
-  background-image: image-url('temp2.png');
-  width: 35%;
-  height: 72%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  object-fit: cover;
+.rec-i {
+  width: 32%;
 }
+
+// .rec-img {
+//   background-image: image-url('temp2.png');
+//   width: 35%;
+//   height: 20%;
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   object-fit: cover;
+// }
 
 .link {
   font-size: 14px;
