@@ -88,8 +88,8 @@ class ProjectForm extends React.Component {
             value={description}
             onChange={this.update('description')}
             className="create-project-field"
-            placeholder="Type a description here."
-            rows="5"
+            placeholder="Briefly describe what your project is about in one or two sentences."
+            rows="10"
           />
         </div>
         <br />
