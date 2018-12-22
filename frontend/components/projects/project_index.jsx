@@ -75,10 +75,51 @@ class ProjectIndex extends Component {
           </div>
           </div>
         <div className="favorites">
-          {this.grabProject(5)}
-          {this.grabProject(6)}
-          {this.grabProject(7)}
-          {this.grabProject(8)}
+          <div className="fav-section">
+            <img className="rec-img" src={this.grabProject(5, 'obj').image_url}></img>
+            <br />
+            <div>{this.grabProject(5, 'obj').title}</div>
+            <br />
+            <div>{this.grabProject(5, 'obj').description}</div>
+            <br />
+            <div className="author">By&nbsp;<p className="author-link">{this.grabProject(5, 'obj').user.name}</p></div>
+
+            </div>{/* {this.grabProject(5)} */}
+          <div className="fav-section">
+            <img className="rec-img" src={this.grabProject(6, 'obj').image_url}></img>
+            <br />
+
+            <div className="fav-section-title">{this.grabProject(6, 'obj').title}</div>
+            <br />
+
+            <div>{this.grabProject(6, 'obj').description}</div>
+            <br />
+            <div className="author">By&nbsp;<p className="author-link">{this.grabProject(6, 'obj').user.name}</p></div>
+            </div>{/* {this.grabProject(6)} */}
+          <div className="fav-section">
+            <img className="rec-img" src={this.grabProject(7, 'obj').image_url}></img>
+            <br />
+
+            <div className="fav-section-title">{this.grabProject(7, 'obj').title}</div>
+            <br />
+
+            <div>{this.grabProject(7, 'obj').description}</div>
+            <br />
+            <div className="author">By&nbsp;<p className="author-link">{this.grabProject(7, 'obj').user.name}</p></div>
+
+            </div>{/* {this.grabProject(7)} */}
+          <div className="fav-section">
+            <img className="rec-img" src={this.grabProject(8, 'obj').image_url}></img>
+            <br />
+
+            <div>{this.grabProject(8, 'obj').title}</div>
+            <br />
+
+            <div>{this.grabProject(8, 'obj').description}</div>
+            <br />
+            <div className="author">By&nbsp;<p className="author-link">{this.grabProject(8, 'obj').user.name}</p></div>
+
+            </div>{/* {this.grabProject(8)} */}
         </div>
       </section>
     );
