@@ -1,3 +1,8 @@
+.homepage {
+  // padding-left: 5.5%;
+  // padding-right: 5.5%;
+}
+
 .categories {
   display: flex;
   justify-content: center;
@@ -15,11 +20,13 @@
 
 .categories a {
   width: 10%;
+  transition: padding .25s, border .25s, background-color .5s;
 }
 
-.categories  div:hover {
-  color: green;
-  text-decoration: underline;
+.categories a:hover {
+  color: rgb(11, 83, 65);
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgb(11, 83, 65);
 }
 
 .middle {
@@ -28,22 +35,37 @@
   display: flex;
   height: 588px;
   border-bottom: 1px solid rgb(224, 224, 224);
+  padding-left: 6.5%;
+  padding-right: 6.5%;
+}
+
+.fresh-favorites {
+  padding-left: 5.5%;
+  padding-right: 5.5%;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.5%;
 }
 
 .favorites {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 400px;
+  height: 375px;
   border-bottom: 1px solid rgb(224, 224, 224);
-  padding-left: 6.5%;
-  padding-right: 6.5%;
-  padding-top: 5%;
+  // padding-left: 5.5%;
+  // padding-right: 5.5%;
+  margin-top: 15px;
   padding-bottom: 5%;
+  padding-left: 5.5%;
+  padding-right: 5.5%;
 }
 
+
 .fav-section {
-  margin: 15px;
+  margin: 16px;
   width: 25%;
   height: 100%;
   // display: flex;
@@ -57,13 +79,15 @@
   // justify-content: center;
   // align-items: center;
   flex-direction: column;
-  width: 49.5%;
+  width: 53.5%;
   border-right: 1px solid rgb(224, 224, 224);
-  height: 100%;
+  // height: 100%;
   margin-top: 0px;
   // margin-left: 95px;
-  margin-left: 6.5%;
+  // margin-left: 6.5%;
+  // padding-left: 60px;
   padding-top: 30px;
+  padding-right: 60px;
 }
 
 .recommended {
@@ -77,13 +101,7 @@
   margin-left: 60px;
 }
 
-.recommended h2 {
-  font-size: 13px;
-  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
-  color: rgb(100, 100, 100);
-  font-weight: 400;
-}
-.featured h2 {
+.homepage h2 {
   font-size: 13px;
   font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
   color: rgb(100, 100, 100);
@@ -92,7 +110,7 @@
 
 .featured-img {
   background-image: image-url('temp.png');
-  width: 91.5%;
+  width: 100%;
   // height: 65%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -101,7 +119,7 @@
 
 .underline-main:hover {
   text-decoration: underline;
-  color: green;
+  color: rgb(15, 107, 84);
 }
 
 .project-index-item {
@@ -121,16 +139,35 @@
 }
 
 .featured-title:hover {
-  color: green;
+  // color: rgb(11, 83, 65);
   text-decoration: underline;
 }
 
 .featured-description {
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: Helvetica;
   font-size: 18px;
   font-weight: 100;
+  line-height: 23px;
   margin-bottom: 10px;
   width: 80%;
+}
+
+.fav-section-title {
+  font-family: Helvetica;
+  font-size: 17px;
+  line-height: 25px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.favorite-description {
+  font-family: Helvetica;
+  font-weight: 300;
+  font-size: 13.5px;
+  margin-bottom: 15px;
+  line-height: 25px;
+  width: 100%;
+  // padding-right: 0px;
 }
 
 .rec-container {
@@ -138,7 +175,7 @@
   align-items: center;
   height: 125px;
   border-bottom: 1px solid rgb(224, 224, 224);
-  width: 83.5%;
+  // width: 83.5%;
   margin-bottom: 3px;
 }
 
@@ -162,13 +199,13 @@
 }
 
 .link:hover {
-  color: green;
+  color: rgb(15, 107, 84);
   text-decoration: underline;
 }
 
 .funded {
   font-size: 12px;
-  color: green;
+  color: rgb(15, 107, 84);
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -195,4 +232,5 @@
 
 .more-projects:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
