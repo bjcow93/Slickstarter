@@ -8,7 +8,6 @@ import { fetchProject } from '../../actions/project_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   const projectId = ownProps.project.id;
   const currentUser = state.session.currentUser;
   return {
