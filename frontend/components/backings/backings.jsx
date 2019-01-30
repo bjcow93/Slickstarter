@@ -14,7 +14,6 @@ class BackingForm extends React.Component {
     this.createBacking = this.props.createBacking.bind(this);
   }
 
-
   update(property) {
     return e => this.setState({
       [property]: e.target.value
