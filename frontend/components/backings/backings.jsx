@@ -13,7 +13,6 @@ class BackingForm extends React.Component {
     // this.handleFile = this.handleFile.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.createBacking = this.props.createBacking.bind(this);
-    // this.handleClick = this.handleClick.bind(this);
   }
 
 
