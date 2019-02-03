@@ -58,8 +58,6 @@ class BackingForm extends React.Component {
       )
     }
 
-    // debugger
-
     return (
       <div className="CSmodal-background" onClick={closeModal}>
         <div className="backing-modal-section" onClick={e => e.stopPropagation()}>
