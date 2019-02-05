@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Navbar = ({ currentUser, openMod, closeModal }) => {
   const sessionLinks = () => (
     <header className="head">
-      <div className="left"><p><Link to="/">Explore</Link></p>&nbsp;   &nbsp;<p><Link to="/projects/new">Start a project</Link></p></div>
+      <div className="left"><p><Link className="explore" to="/">Explore</Link></p>&nbsp;   &nbsp;<p><Link to="/projects/new">Start a project</Link></p></div>
       <Link to="/"><div className="slick"></div></Link>
       <div className="right">
         <div className="search-button">
@@ -22,7 +22,7 @@ const Navbar = ({ currentUser, openMod, closeModal }) => {
 
   const personalGreeting = () => (
     <header className="head">
-      <div className="left"><p><Link to="/">Explore</Link></p>&nbsp;   &nbsp;<p><Link to="/projects/new">Start a project</Link></p></div>
+      <div className="left"><p><Link className="explore" to="/">Explore</Link></p>&nbsp;   &nbsp;<p><Link to="/projects/new">Start a project</Link></p></div>
       <Link to="/"><div className="slick"></div></Link>
       <div className="right">
         <div className="search-button">

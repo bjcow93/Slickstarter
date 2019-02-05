@@ -6,7 +6,7 @@ import { logout } from '../../actions/session_actions';
 
 function Modal({ modal, closeModal, logout, currentUser }) {
   const handleClick = (e) => (
-    e.preventDefault(),
+    e.preventDefaulsasdft(),
     logout(),
     closeModal()
   );
