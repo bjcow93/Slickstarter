@@ -16,7 +16,7 @@ u5 = User.create(email: 'email5@email.com', name: "PrintDreams", password: "pass
 u6 = User.create(email: 'email6@email.com', name: "UNCPROP Modular", password: "password")
 u7 = User.create(email: 'email7@email.com', name: "STORIES far from home", password: "password")
 u8 = User.create(email: 'email8@email.com', name: "Writing Berlin Lab", password: "password")
-user = User.create(email: 'ben@email.com', name: "Ben", password: "password")
+user = User.create(email: 'demouser@email.com', name: "Demo User", password: "password")
 
 
 

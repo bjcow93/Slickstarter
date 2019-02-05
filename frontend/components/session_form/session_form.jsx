@@ -28,8 +28,8 @@ class SessionForm extends React.Component {
     e.preventDefault();
 
     this.props.processForm({
-      email: "ben@email.com",
-      name: "Ben",
+      email: "demouser@email.com",
+      name: "Demo User",
       password: "password"
     });
   }
