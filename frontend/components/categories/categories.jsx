@@ -30,7 +30,6 @@ class CategoryShow extends Component {
     const { category } = this.props;
     if (!category) return null;
     const projects = category.projects;
-    // const projects = this.state.projects;
     return (
       <section className="homepage">
         <div className="categories">
