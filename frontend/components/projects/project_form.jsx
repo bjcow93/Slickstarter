@@ -19,7 +19,6 @@ class ProjectForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  
   update(property) {
     return e => this.setState({
       [property]: e.target.value
