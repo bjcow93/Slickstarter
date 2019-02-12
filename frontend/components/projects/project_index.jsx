@@ -25,7 +25,6 @@ class ProjectIndex extends Component {
 
   render() {
     const { projects } = this.props;
-    // debugger
     if (projects.length <= 1) return null;
     
     return (
