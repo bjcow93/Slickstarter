@@ -26,8 +26,8 @@ class ProjectIndex extends Component {
   render() {
     const { projects } = this.props;
     // debugger
-    if (projects.length === 0) return null;
-  
+    if (projects.length <= 1) return null;
+    
     return (
       <section className="homepage">
         <div className="categories">
@@ -77,7 +77,7 @@ class ProjectIndex extends Component {
         <div className="fresh-favorites"><h2>FRESH FAVORITES</h2><p className="more-projects">View more</p></div>
         <div className="favorites">
           <div className="fav-section">
-            <Link className="underline-main" to={`/projects/${this.grabProject(1, 'obj').id}`}>
+            <Link className="underline-main" to={`/projects/${this.grabProject(5, 'obj').id}`}>
             <img className="rec-img" src={this.grabProject(5, 'obj').image_url}></img>
             <br />
             <div className="fav-section-title">{this.grabProject(5, 'obj').title}</div>
@@ -86,9 +86,10 @@ class ProjectIndex extends Component {
             <div className="favorite-description">{this.grabProject(5, 'obj').description}</div>
             <div className="author">By&nbsp;<p className="author-link">{this.grabProject(5, 'obj').user.name}</p></div>
 
-            </div>{/* {this.grabProject(5)} */}
+          </div>
+
           <div className="fav-section">
-            <Link className="underline-main" to={`/projects/${this.grabProject(1, 'obj').id}`}>
+            <Link className="underline-main" to={`/projects/${this.grabProject(6, 'obj').id}`}>
             <img className="rec-img" src={this.grabProject(6, 'obj').image_url}></img>
             <br />
 
@@ -97,9 +98,10 @@ class ProjectIndex extends Component {
 
             <div className="favorite-description">{this.grabProject(6, 'obj').description}</div>
             <div className="author">By&nbsp;<p className="author-link">{this.grabProject(6, 'obj').user.name}</p></div>
-            </div>{/* {this.grabProject(6)} */}
+          </div>
+
           <div className="fav-section">
-            <Link className="underline-main" to={`/projects/${this.grabProject(1, 'obj').id}`}>
+            <Link className="underline-main" to={`/projects/${this.grabProject(7, 'obj').id}`}>
             <img className="rec-img" src={this.grabProject(7, 'obj').image_url}></img>
             <br />
 
@@ -109,9 +111,10 @@ class ProjectIndex extends Component {
             <div className="favorite-description">{this.grabProject(7, 'obj').description}</div>
             <div className="author">By&nbsp;<p className="author-link">{this.grabProject(7, 'obj').user.name}</p></div>
 
-            </div>{/* {this.grabProject(7)} */}
+          </div>
+
           <div className="fav-section">
-            <Link className="underline-main" to={`/projects/${this.grabProject(1, 'obj').id}`}>
+            <Link className="underline-main" to={`/projects/${this.grabProject(8, 'obj').id}`}>
             <img className="rec-img" src={this.grabProject(8, 'obj').image_url}></img>
             <br />
 
@@ -121,7 +124,7 @@ class ProjectIndex extends Component {
             <div className="favorite-description">{this.grabProject(8, 'obj').description}</div>
             <div className="author">By&nbsp;<p className="author-link">{this.grabProject(8, 'obj').user.name}</p></div>
 
-            </div>{/* {this.grabProject(8)} */}
+          </div>
         </div>
       </section>
     );
