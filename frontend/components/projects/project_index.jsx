@@ -135,4 +135,3 @@ class ProjectIndex extends Component {
 }
 
 export default ProjectIndex;
-
