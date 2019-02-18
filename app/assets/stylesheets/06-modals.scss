@@ -1,0 +1,39 @@
+.CSmodal-background {
+  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+
+// .CSmodal-section {
+//   background-color: white;
+//   border: 1px solid grey;
+//   width: 500px;
+//   z-index: 11;
+//   position: absolute;
+//   display: wrap;
+//   right: 18px;
+//   top: 78px;
+// }
+
+.CSmodal-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: white;
+  transform: translate(-50%, -50%);
+}
+
+.CSmodal-section-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  padding: 25px;
+  height: 40px;
+  font-weight: bold;
+}

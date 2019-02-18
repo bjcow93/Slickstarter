@@ -51,7 +51,7 @@ class ProjectShow extends Component {
             <div className="show-top-right">
               <h2 className="show-title">{project.title}</h2>
               <br />
-              <div className="show-desc">Description: {project.description}</div>
+              <div className="show-desc">{project.description}</div>
             </div>
           </div>
           <div className="show-bottom">
@@ -70,11 +70,12 @@ class ProjectShow extends Component {
               <div className="days-to-go">{days_to_go}</div>
                 <p>days to go</p>
                 <br />
-              <div className="backing-button">Back this project</div>
-              <div className="reminder-button">
+              {/* <div className="backing-button">Back this project</div> */}
+              <button className="backing-button" onClick={this.props.openCSMod}>Back this project</button>
+              <button className="reminder-button" onClick={this.props.openCSMod}>
                 <img className="heart-icon" src={window.heartUrl} />
                 Remind me
-              </div>
+              </button>
             </div>
           </div>
         </div>

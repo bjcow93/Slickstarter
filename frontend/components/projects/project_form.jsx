@@ -69,7 +69,7 @@ class ProjectForm extends React.Component {
         <h1 className="create-main-header">Let's get started!</h1>
         <br />
         <div className="create-input-field">
-          <h1 className="create-headers">Describe what you’ll be creating.</h1>
+          <h1 className="create-headers">Choose a Title.</h1>
           <h2 className="create-below-headers">Pick a project title to display to the community.</h2>
           <input
             type="text"

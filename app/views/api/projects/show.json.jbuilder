@@ -1,5 +1,5 @@
 json.project do
   json.partial! 'project', project: @project
-  json.image_url url_for(@project.image)
+  # json.image_url url_for(@project.image)
 end
 

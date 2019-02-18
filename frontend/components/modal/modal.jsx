@@ -11,7 +11,7 @@ function Modal({ modal, closeModal, logout, currentUser }) {
     closeModal()
   );
 
-  if (!modal) {
+  if (modal != "open") {
     return null;
   }
 

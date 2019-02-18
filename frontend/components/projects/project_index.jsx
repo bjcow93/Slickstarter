@@ -30,14 +30,14 @@ class ProjectIndex extends Component {
     return (
       <section className="homepage">
         <div className="categories">
-          <div><Link to={`/`}>Arts</Link></div>
-          <div><Link to={`/`}>Comics & Illustration</Link></div>
-          <div><Link to={`/`}>Design & Tech</Link></div>
-          <div><Link to={`/`}>Film</Link></div>
-          <div><Link to={`/`}>Food & Craft</Link></div>
-          <div><Link to={`/`}>Games</Link></div>
-          <div><Link to={`/`}>Music</Link></div>
-          <div><Link to={`/`}>Publishing</Link></div>
+          <div><Link to={`/categories/1`}>Arts</Link></div>
+          <div><Link to={`/categories/2`}>Comics & Illustration</Link></div>
+          <div><Link to={`/categories/3`}>Design & Tech</Link></div>
+          <div><Link to={`/categories/4`}>Film</Link></div>
+          <div><Link to={`/categories/5`}>Food & Craft</Link></div>
+          <div><Link to={`/categories/6`}>Games</Link></div>
+          <div><Link to={`/categories/7`}>Music</Link></div>
+          <div><Link to={`/categories/8`}>Publishing</Link></div>
         </div>
         <div className="middle">
           <div className="featured">
