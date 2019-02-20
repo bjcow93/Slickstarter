@@ -39,6 +39,10 @@ u17 = User.create(email: 'email17@email.com', name: "Mova", password: "password"
 u18 = User.create(email: 'email18@email.com', name: "Riku Toivonen", password: "password")
 u19 = User.create(email: 'email19@email.com', name: "Chifen & Ewan", password: "password")
 u20 = User.create(email: 'email20@email.com', name: "Creoqode", password: "password")
+u21 = User.create(email: 'email21@email.com', name: "REEFA", password: "password")
+u22 = User.create(email: 'email22@email.com', name: "Aaron Biebert", password: "password")
+u23 = User.create(email: 'email23@email.com', name: "Sam Romero", password: "password")
+u24 = User.create(email: 'email24@email.com', name: "Tim Mahoney", password: "password")
 user = User.create(email: 'demouser@email.com', name: "Demo User", password: "password")
 
 
@@ -64,6 +68,10 @@ p17 = Project.create(user_id: 17, title: "MOVA 3.0 Cycling Jacket", description:
 p18 = Project.create(user_id: 18, title: "Quickstarter: I BELIEVE I CAN PLY", description: "The plywood frame works as a clip - to attach pictures, papers and notes. It can be used as a drawing board as well.", funding_goal: 1029, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
 p19 = Project.create(user_id: 19, title: "Quickstarter: Matilda ~ the rocking note & photo stand", description: "The flat-packed, fold-it-yourself, mirror-finish stand that waves your favourite photos, notes or postcards at you!", funding_goal: 469, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
 p20 = Project.create(user_id: 20, title: "PYXA | DIY Game Console", description: "Build your game console and create your own video games.", funding_goal: 12864, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p21 = Project.create(user_id: 21, title: "REEFA / Justice for Israel", description: "A movie based on the true story of 18 year-old Latin artist Israel Reefa Hernandez whose death by police sparked a national movement.", funding_goal: 150000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p22 = Project.create(user_id: 22, title: "You Don't Know Nicotine - Documentary Film", description: "Join us on a wild journey around the world to discover the eye-opening truth about nicotine.", funding_goal: 50000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p23 = Project.create(user_id: 23, title: "The Black Eagle Documentary", description: "This documentary will focus on how a symbol for farm workers rights' became a cultural icon.", funding_goal: 15000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p24 = Project.create(user_id: 24, title: "Finding Plantasia", description: "A treasure-hunt documentary about two best friends looking for an incredibly rare record made for plants.", funding_goal: 9000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
 
 
 
@@ -83,6 +91,11 @@ pc9 = ProjectCategory.create(project_id: 17, category_id: 3)
 pc10 = ProjectCategory.create(project_id: 18, category_id: 3)
 pc11 = ProjectCategory.create(project_id: 19, category_id: 3)
 pc12 = ProjectCategory.create(project_id: 20, category_id: 3)
+
+pc13 = ProjectCategory.create(project_id: 21, category_id: 4)
+pc14 = ProjectCategory.create(project_id: 22, category_id: 4)
+pc15 = ProjectCategory.create(project_id: 23, category_id: 4)
+pc16 = ProjectCategory.create(project_id: 24, category_id: 4)
 
 
   Project.all.each do |el|
@@ -149,6 +162,18 @@ pc12 = ProjectCategory.create(project_id: 20, category_id: 3)
 
   file20 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed20.png')
   Project.all[19].image.attach(io: file20, filename: "seed20.png")
+
+  file21 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed21.png')
+  Project.all[20].image.attach(io: file21, filename: "seed21.png")
+
+  file22 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed22.png')
+  Project.all[21].image.attach(io: file22, filename: "seed22.png")
+
+  file23 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed23.png')
+  Project.all[22].image.attach(io: file23, filename: "seed23.png")
+
+  file24 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed24.png')
+  Project.all[23].image.attach(io: file24, filename: "seed24.png")
 
 
 
