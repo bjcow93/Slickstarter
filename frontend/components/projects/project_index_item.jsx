@@ -7,9 +7,9 @@ const ProjectIndexItem = ({ project }) => {
  
   return (
     <div className="project-index-item">
-    <div><Link className="link" to={`/projects/${project.id}`}>
+    <Link className="link" to={`/projects/${project.id}`}>
       {project.title}
-    </Link></div>
+    </Link>
     <div className="funded">{funded}% funded</div>
     <div className="author">By&nbsp;<p className="author-link">{project.user.name}</p></div>
   </div>

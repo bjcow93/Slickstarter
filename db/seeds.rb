@@ -43,6 +43,22 @@ u21 = User.create(email: 'email21@email.com', name: "REEFA", password: "password
 u22 = User.create(email: 'email22@email.com', name: "Aaron Biebert", password: "password")
 u23 = User.create(email: 'email23@email.com', name: "Sam Romero", password: "password")
 u24 = User.create(email: 'email24@email.com', name: "Tim Mahoney", password: "password")
+u25 = User.create(email: 'email25@email.com', name: "Jeremy Pang", password: "password")
+u26 = User.create(email: 'email26@email.com', name: "SuperFat Team", password: "password")
+u27 = User.create(email: 'email27@email.com', name: "Kettle & Fire", password: "password")
+u28 = User.create(email: 'email28@email.com', name: "Atomo Coffee", password: "password")
+u29 = User.create(email: 'email29@email.com', name: 'Matthias Linda', password: 'password')
+u30 = User.create(email: 'email30@email.com', name: 'Samuel Ashton Roberts', password: 'password')
+u31 = User.create(email: 'email31@email.com', name: 'GreaterThanGames', password: 'password')
+u32 = User.create(email: 'email32@email.com', name: 'Indigo R McD', password: 'password')
+u33 = User.create(email: 'email33@email.com', name: 'Jenny Bruce', password: 'password')
+u34 = User.create(email: 'email34@email.com', name: 'Tourniquet', password: 'password')
+u35 = User.create(email: 'email35@email.com', name: 'Chase Grozdina', password: 'password')
+u36 = User.create(email: 'email36@email.com', name: 'Railway Glass', password: 'password')
+u37 = User.create(email: 'email37@email.com', name: 'Porter Fox', password: 'password')
+u38 = User.create(email: 'email38@email.com', name: 'Thornwillow', password: 'password')
+u39 = User.create(email: 'email39@email.com', name: 'Obvious State', password: 'password')
+u40 = User.create(email: 'email40@email.com', name: 'Beehive Books', password: 'password')
 user = User.create(email: 'demouser@email.com', name: "Demo User", password: "password")
 
 
@@ -72,6 +88,22 @@ p21 = Project.create(user_id: 21, title: "REEFA / Justice for Israel", descripti
 p22 = Project.create(user_id: 22, title: "You Don't Know Nicotine - Documentary Film", description: "Join us on a wild journey around the world to discover the eye-opening truth about nicotine.", funding_goal: 50000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
 p23 = Project.create(user_id: 23, title: "The Black Eagle Documentary", description: "This documentary will focus on how a symbol for farm workers rights' became a cultural icon.", funding_goal: 15000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
 p24 = Project.create(user_id: 24, title: "Finding Plantasia", description: "A treasure-hunt documentary about two best friends looking for an incredibly rare record made for plants.", funding_goal: 9000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p25 = Project.create(user_id: 25, title: "SCHOOL OF WOK - IT'S A'BAO TIME TO GO GLOBAL!", description: "Award-winning Asian cookery school, School of Wok, are making the world's first DIY Bao Bun Kit - and want to send it across the globe.", funding_goal: 45711, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p26 = Project.create(user_id: 26, title: "SuperFat - Amazing Nut Butters!", description: "SuperFat - Amazing nut butters with functional ingredients. Keto & Vegan certified.", funding_goal: 10000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p27 = Project.create(user_id: 27, title: "Kettle & Fire Keto Friendly Soups | Powered by Bone Broth.", description: "The first ever mouthwatering keto friendly soups made with bone broth. Nutritious, delicious, and ready to eat in seconds.", funding_goal: 20000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p28 = Project.create(user_id: 28, title: "Atomo: We hacked the coffee bean - invented molecular coffee", description: "Atomo: We hacked the coffee bean - invented molecular coffee", funding_goal: 10000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p29 = Project.create(user_id: 29, title: "Chained Echoes - a 16bit fantasy RPG with mechs and airships", description: "A classic JRPG adventure that combines a fantasy world full of magic with mechs and airships.", funding_goal: 68062, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p30 = Project.create(user_id: 30, title: "Football Fantasy, a first-and-dungeon zine.", description: "A zine of rules and content for implementing American Football in Fantasy Role Playing Games.", funding_goal: 1800, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p31 = Project.create(user_id: 31, title: "Sentinel Comics: The Roleplaying Game", description: "An all-new tabletop roleplaying game system based in the exciting world of Sentinel Comics!", funding_goal: 50000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p32 = Project.create(user_id: 32, title: "M.N.S.T.R. [Monsters, Ne'er-do-wells, and Silk Trade Routes]", description: "An easy to pick up and play TTRPG about moving goods along silk road style trade routes through a hazardous and magical world.", funding_goal: 1000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p33 = Project.create(user_id: 33, title: "Musical evidence to prove the existence of GHOSTE-Debut EP!", description: "Dreamy-pop brimming with passion, longing, and hope draped in sultry beats and haunting melodies!", funding_goal: 7000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p34 = Project.create(user_id: 34, title: "Tourniquet: VANISHING LESSONS - 25th Anniversary VINYL!!", description: "On the 25th Anniversary of its release, help bring our 1994 album - VANISHING LESSONS - to VINYL!", funding_goal: 3900, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p35 = Project.create(user_id: 35, title: "Aflockalypse: Rise of the Astral Beast", description: "A fantasy power metal/ballad album wherein four heroic chickens must gather together to save their world from the astral beast.", funding_goal: 8000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p36 = Project.create(user_id: 36, title: "Railway Glass First Studio Album", description: "An album based on influences by a new and old generation of rock and metal, forming a new sound", funding_goal: 783, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p37 = Project.create(user_id: 37, title: "2019 NOWHERE Print Annual", description: "The best travel writing, anywhere.", funding_goal: 15000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p38 = Project.create(user_id: 38, title: "THE GREAT GATSBY", description: "An exquisite letterpress printed and hand bound limited edition of Fitzgerald's masterwork with Art Deco flair.", funding_goal: 10000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p39 = Project.create(user_id: 39, title: "SHE: A VISUAL ODE TO VISIONARY WOMEN", description: "100 beautiful ways to share the brilliant words of visionary women writers, from Sappho to Sylvia Plath.", funding_goal: 15000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p40 = Project.create(user_id: 40, title: "Classic Books Reimagined Through Illustration", description: "PETER PAN, CRIME & PUNISHMENT and THE BLAZING WORLD, presented in oversized, lavishly illustrated heirloom edition slipcase hardcovers.", funding_goal: 150000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
 
 
 
@@ -96,6 +128,26 @@ pc13 = ProjectCategory.create(project_id: 21, category_id: 4)
 pc14 = ProjectCategory.create(project_id: 22, category_id: 4)
 pc15 = ProjectCategory.create(project_id: 23, category_id: 4)
 pc16 = ProjectCategory.create(project_id: 24, category_id: 4)
+
+pc17 = ProjectCategory.create(project_id: 25, category_id: 5)
+pc18 = ProjectCategory.create(project_id: 26, category_id: 5)
+pc19 = ProjectCategory.create(project_id: 27, category_id: 5)
+pc20 = ProjectCategory.create(project_id: 28, category_id: 5)
+
+pc21 = ProjectCategory.create(project_id: 29, category_id: 6)
+pc22 = ProjectCategory.create(project_id: 30, category_id: 6)
+pc23 = ProjectCategory.create(project_id: 31, category_id: 6)
+pc24 = ProjectCategory.create(project_id: 32, category_id: 6)
+
+pc25 = ProjectCategory.create(project_id: 33, category_id: 7)
+pc26 = ProjectCategory.create(project_id: 34, category_id: 7)
+pc27 = ProjectCategory.create(project_id: 35, category_id: 7)
+pc28 = ProjectCategory.create(project_id: 36, category_id: 7)
+
+pc29 = ProjectCategory.create(project_id: 37, category_id: 8)
+pc30 = ProjectCategory.create(project_id: 38, category_id: 8)
+pc31 = ProjectCategory.create(project_id: 39, category_id: 8)
+pc32 = ProjectCategory.create(project_id: 40, category_id: 8)
 
 
   Project.all.each do |el|
@@ -174,6 +226,54 @@ pc16 = ProjectCategory.create(project_id: 24, category_id: 4)
 
   file24 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed24.png')
   Project.all[23].image.attach(io: file24, filename: "seed24.png")
+
+  file25 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed25.png')
+  Project.all[24].image.attach(io: file25, filename: "seed25.png")
+
+  file26 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed26.png')
+  Project.all[25].image.attach(io: file26, filename: "seed26.png")
+
+  file27 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed27.png')
+  Project.all[26].image.attach(io: file27, filename: "seed27.png")
+
+  file28 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed28.png')
+  Project.all[27].image.attach(io: file28, filename: "seed28.png")
+
+  file29 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed29.png')
+  Project.all[28].image.attach(io: file29, filename: "seed29.png")
+
+  file30 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed30.png')
+  Project.all[29].image.attach(io: file30, filename: "seed30.png")
+
+  file31 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed31.png')
+  Project.all[30].image.attach(io: file31, filename: "seed31.png")
+
+  file32 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed32.png')
+  Project.all[31].image.attach(io: file32, filename: "seed32.png")
+
+  file33 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed33.png')
+  Project.all[32].image.attach(io: file33, filename: "seed33.png")
+
+  file34 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed34.png')
+  Project.all[33].image.attach(io: file34, filename: "seed34.png")
+
+  file35 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed35.png')
+  Project.all[34].image.attach(io: file35, filename: "seed35.png")
+
+  file36 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed36.png')
+  Project.all[35].image.attach(io: file36, filename: "seed36.png")
+
+  file37 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed37.png')
+  Project.all[36].image.attach(io: file37, filename: "seed37.png")
+
+  file38 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed38.png')
+  Project.all[37].image.attach(io: file38, filename: "seed38.png")
+
+  file39 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed39.png')
+  Project.all[38].image.attach(io: file39, filename: "seed39.png")
+
+  file40 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed40.png')
+  Project.all[39].image.attach(io: file40, filename: "seed40.png")
 
 
 
