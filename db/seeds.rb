@@ -31,10 +31,14 @@ u9 = User.create(email: 'email9@email.com', name: "The Current Museum", password
 u10 = User.create(email: 'email10@email.com', name: "Stuart Semple", password: "password")
 u11 = User.create(email: 'email11@email.com', name: "Hannah Fofana", password: "password")
 u12 = User.create(email: 'email12@email.com', name: "Naima Green", password: "password")
-u13 = User.create(email: 'email13@email.com', name: "Mova", password: "password")
-u14 = User.create(email: 'email14@email.com', name: "Riku Toivonen", password: "password")
-u15 = User.create(email: 'email15@email.com', name: "Chifen & Ewan", password: "password")
-u16 = User.create(email: 'email16@email.com', name: "Creoqode", password: "password")
+u13 = User.create(email: 'email13@email.com', name: "Dan Brereton", password: "password")
+u14 = User.create(email: 'email14@email.com', name: "Karl Kesel", password: "password")
+u15 = User.create(email: 'email15@email.com', name: "Beehive Books", password: "password")
+u16 = User.create(email: 'email16@email.com', name: "John Coats", password: "password")
+u17 = User.create(email: 'email17@email.com', name: "Mova", password: "password")
+u18 = User.create(email: 'email18@email.com', name: "Riku Toivonen", password: "password")
+u19 = User.create(email: 'email19@email.com', name: "Chifen & Ewan", password: "password")
+u20 = User.create(email: 'email20@email.com', name: "Creoqode", password: "password")
 user = User.create(email: 'demouser@email.com', name: "Demo User", password: "password")
 
 
@@ -52,14 +56,14 @@ p9 = Project.create(user_id: 9, title: "The Current Museum: Salon on Artificial 
 p10 = Project.create(user_id: 10, title: "The blackest black paint in the world! Black 3.0", description: "We've created a paint that absorbs 98-99% of visible light, we want to share this black hole in a bottle with all artists and creators.", funding_goal: 32155, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Mar 2019 01:00:00 UTC +00:00')
 p11 = Project.create(user_id: 11, title: "The Field Tarot Deck", description: "A 78-Card Artist Tarot Deck & Pocket Guidebook", funding_goal: 7000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sun, 03 Mar 2019 01:00:00 UTC +00:00')
 p12 = Project.create(user_id: 12, title: "Pur·suit", description: "A deck of playing cards featuring queer womxn, trans, non-binary, and gender nonconforming people.", funding_goal: 32000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
-p13 = Project.create(user_id: 3, title: "Project9", description: "P9 Description", funding_goal: 90000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 29 Dec 2018 01:00:00 UTC +00:00')
-p14 = Project.create(user_id: 1, title: "Project10", description: "P10 Description", funding_goal: 100000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 16 Mar 2018 01:00:00 UTC +00:00')
-p15 = Project.create(user_id: 1, title: "Project11", description: "P10 Description", funding_goal: 100000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 16 Mar 2018 01:00:00 UTC +00:00')
-p16 = Project.create(user_id: 1, title: "Project12", description: "P10 Description", funding_goal: 100000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 16 Mar 2018 01:00:00 UTC +00:00')
-p17 = Project.create(user_id: 13, title: "MOVA 3.0 Cycling Jacket", description: "More than a Cycling Jacket: 22.000mm Waterproof, Reversible, Day and Night Visible, Packable, 8 Pockets, Hood fits your Helmet.", funding_goal: 5000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
-p18 = Project.create(user_id: 14, title: "Quickstarter: I BELIEVE I CAN PLY", description: "The plywood frame works as a clip - to attach pictures, papers and notes. It can be used as a drawing board as well.", funding_goal: 1029, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
-p19 = Project.create(user_id: 15, title: "Quickstarter: Matilda ~ the rocking note & photo stand", description: "The flat-packed, fold-it-yourself, mirror-finish stand that waves your favourite photos, notes or postcards at you!", funding_goal: 469, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
-p20 = Project.create(user_id: 16, title: "PYXA | DIY Game Console", description: "Build your game console and create your own video games.", funding_goal: 12864, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p13 = Project.create(user_id: 13, title: "Dan Brereton’s GIANTKILLER Monster Edition Hardcover", description: "An over-size, expanded hardcover collection of the classic American Kaiju Epic", funding_goal: 16000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 29 Dec 2018 01:00:00 UTC +00:00')
+p14 = Project.create(user_id: 14, title: "SECTION ZERO 1959!", description: "ATOMIC MUTATIONS! FLYING SAUCERS! COMMIES! Karl Kesel & Tom Grummett's SECTION ZERO returns— in an ALL NEW graphic novel set in 1959!", funding_goal: 60000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 16 Mar 2018 01:00:00 UTC +00:00')
+p15 = Project.create(user_id: 15, title: "Classic Books, Reimagined Through Illustration", description: "PETER PAN, CRIME & PUNISHMENT and THE BLAZING WORLD, presented in oversized, lavishly illustrated heirloom edition slipcase hardcovers.", funding_goal: 150000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 16 Mar 2018 01:00:00 UTC +00:00')
+p16 = Project.create(user_id: 16, title: "Dino Beasts: The Hunt", description: "Totally rad 82 page Dinosaur-Barbarian fantasy comic.", funding_goal: 4000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Sat, 16 Mar 2018 01:00:00 UTC +00:00')
+p17 = Project.create(user_id: 17, title: "MOVA 3.0 Cycling Jacket", description: "More than a Cycling Jacket: 22.000mm Waterproof, Reversible, Day and Night Visible, Packable, 8 Pockets, Hood fits your Helmet.", funding_goal: 5000, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p18 = Project.create(user_id: 18, title: "Quickstarter: I BELIEVE I CAN PLY", description: "The plywood frame works as a clip - to attach pictures, papers and notes. It can be used as a drawing board as well.", funding_goal: 1029, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p19 = Project.create(user_id: 19, title: "Quickstarter: Matilda ~ the rocking note & photo stand", description: "The flat-packed, fold-it-yourself, mirror-finish stand that waves your favourite photos, notes or postcards at you!", funding_goal: 469, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
+p20 = Project.create(user_id: 20, title: "PYXA | DIY Game Console", description: "Build your game console and create your own video games.", funding_goal: 12864, start_date: 'Sun, 02 Dec 2018 01:00:00 UTC +00:00', end_date: 'Fri, 22 Feb 2019 01:00:00 UTC +00:00')
 
 
 
@@ -69,6 +73,11 @@ pc1 = ProjectCategory.create(project_id: 9, category_id: 1)
 pc2 = ProjectCategory.create(project_id: 10, category_id: 1)
 pc3 = ProjectCategory.create(project_id: 11, category_id: 1)
 pc4 = ProjectCategory.create(project_id: 12, category_id: 1)
+
+pc5 = ProjectCategory.create(project_id: 13, category_id: 2)
+pc6 = ProjectCategory.create(project_id: 14, category_id: 2)
+pc7 = ProjectCategory.create(project_id: 15, category_id: 2)
+pc8 = ProjectCategory.create(project_id: 16, category_id: 2)
 
 pc9 = ProjectCategory.create(project_id: 17, category_id: 3)
 pc10 = ProjectCategory.create(project_id: 18, category_id: 3)
@@ -116,6 +125,18 @@ pc12 = ProjectCategory.create(project_id: 20, category_id: 3)
 
   file12 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed12.png')
   Project.all[11].image.attach(io: file12, filename: "seed12.png")
+
+  file13 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed13.png')
+  Project.all[12].image.attach(io: file13, filename: "seed13.png")
+
+  file14 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed14.png')
+  Project.all[13].image.attach(io: file14, filename: "seed14.png")
+
+  file15 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed15.png')
+  Project.all[14].image.attach(io: file15, filename: "seed15.png")
+
+  file16 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed16.png')
+  Project.all[15].image.attach(io: file16, filename: "seed16.png")
 
   file17 = open('https://s3-us-west-1.amazonaws.com/seedassets/seed17.png')
   Project.all[16].image.attach(io: file17, filename: "seed17.png")
