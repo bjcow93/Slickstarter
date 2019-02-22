@@ -12,3 +12,4 @@ export const fetchFilteredResults = (string) => (
     dispatch(receiveResults(results))
   ))
 );
+
