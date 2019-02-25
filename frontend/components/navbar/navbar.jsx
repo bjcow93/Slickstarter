@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const Navbar = ({ currentUser, openMod, closeModal }) => {
+const Navbar = ({ currentUser, openLoginMod, openSearchMod, openMod, closeModal }) => {
   const sessionLinks = () => (
     <header className="head">
       <div className="left"><p><Link className="explore" to="/">Explore</Link></p>&nbsp;   &nbsp;<p><Link to="/projects/new">Start a project</Link></p></div>
@@ -26,11 +26,12 @@ const Navbar = ({ currentUser, openMod, closeModal }) => {
       <Link to="/"><div className="slick"></div></Link>
       <div className="right">
         <div className="search-button">
-          <Link to="/">Search</Link>
-          <Link className="search-icon" to="/"></Link>
+          <button onClick={openSearchMod}>Search</button>
+          <button onClick={openSearchMod} className="search-icon"></button>
         </div>
         &nbsp;    &nbsp;
-        {openMod}
+        {/* {openMod} */}
+        <button className="icon" onClick={openLoginMod}></button>
       </div>
     </header>
   );
