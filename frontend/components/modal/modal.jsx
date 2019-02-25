@@ -47,9 +47,9 @@ class Modal extends Component {
 
     } else if (modal == "search") {
       return (
-        <div className="CSmodal-background" onClick={closeModal}>
-          <div className="search-modal-section" onClick={e => e.stopPropagation()}>
-            <div className="search-section-a">
+        <div className="search-modal-background" onClick={closeModal}>
+          <div className="search-modal-section">
+            <div className="search-section-a" onClick={e => e.stopPropagation()}>
               <form className="search-form">
                   <input
                     type="text"
@@ -57,10 +57,13 @@ class Modal extends Component {
                     onChange={this.update('title')}
                     className="search-field"
                     placeholder="Search by project title"
+                    autoFocus
                   />
               </form>
             </div>
-            <div className="search-section-b"></div>
+            <div className="search-section-b">
+              <div className="x-icon"></div>
+            </div>
           </div>
         </div>
       )
