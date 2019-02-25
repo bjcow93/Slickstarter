@@ -1,33 +1,77 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 
 
-function Modal({ modal, closeModal, logout, currentUser }) {
-  const handleClick = (e) => (
-    e.preventDefault(),
-    logout(),
-    closeModal()
-  );
+class Modal extends Component {
+  constructor(props) {
+    super(props);
 
-  if (modal != "open") {
-    return null;
+    this.state = {
+      title: ""
+    };
+
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  return (
-    <div className="modal-background" onClick={closeModal}>
-      <div className="modal-section" onClick={e => e.stopPropagation()}>
-        <div className="modal-section-a">{currentUser.name}</div>
-        <div className="modal-section-b" onClick={e => e.stopPropagation()}>
-          <p className="header-button">
-            <button onClick={handleClick}>Log out</button>
-          </p>
+  handleClick(e) {
+    e.preventDefault(),
+    this.props.logout(),
+    this.props.closeModal()
+  };
+
+  update(property) {
+    return e => this.setState({
+      [property]: e.target.value
+    });
+  }
+
+  render () {    
+    const { modal, closeModal, logout, currentUser } = this.props;
+    const {title} = this.state;
+
+    if (modal == "open") {
+      return (
+        <div className="modal-background" onClick={closeModal}>
+          <div className="modal-section" onClick={e => e.stopPropagation()}>
+            <div className="modal-section-a">{currentUser.name}</div>
+            <div className="modal-section-b" onClick={e => e.stopPropagation()}>
+              <p className="header-button">
+                <button onClick={this.handleClick}>Log out</button>
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  );
+      );
+
+    } else if (modal == "search") {
+      return (
+        <div className="CSmodal-background" onClick={closeModal}>
+          <div className="search-modal-section" onClick={e => e.stopPropagation()}>
+            <div className="search-section-a">
+              <form className="search-form">
+                  <input
+                    type="text"
+                    value={title}
+                    onChange={this.update('title')}
+                    className="search-field"
+                    placeholder="Search by project title"
+                  />
+              </form>
+            </div>
+            <div className="search-section-b"></div>
+          </div>
+        </div>
+      )
+    } else {
+    return null;
+    }
+  }
 }
+
+
+
 
 const mapStateToProps = state => {
   return {

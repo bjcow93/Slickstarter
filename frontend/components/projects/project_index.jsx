@@ -6,10 +6,25 @@ import ProjectIndexItem from './project_index_item';
 // import ProjectFormContainer from './project_form_container';
 
 class ProjectIndex extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      title: ""
+    };
+
+
+  }
+
   componentDidMount() {
     this.props.fetchProjects();
   }
 
+  update(property) {
+    return e => this.setState({
+      [property]: e.target.value
+    });
+  }
 
   grabProject(n, type='link') {
     const { projects } = this.props;
@@ -25,6 +40,7 @@ class ProjectIndex extends Component {
 
   render() {
     const { projects } = this.props;
+    const {title} = this.state;
     if (projects.length <= 1) return null;
     
     return (

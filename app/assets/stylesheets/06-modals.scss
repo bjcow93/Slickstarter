@@ -37,3 +37,40 @@
   height: 40px;
   font-weight: bold;
 }
+
+.search-section-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  height: 65px;
+}
+
+.search-modal-section {
+  display: flex;
+  height: 65px;
+  // padding: 25px;
+  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+  font-size: 14px;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  background: white;
+}
+
+.search-field {
+  border: 1px solid lightgray;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  align-items: center;
+  transition: transform .3s ease-in-out, border .3s ease-in-out, box-shadow .3s ease-in-out;
+  font-size: 14px;
+  box-shadow: 0px 2px 2px .5px rgb(226, 226, 226);
+  padding-left: 20px;
+}
+
+.search-form {
+  height: 100%;
+  width: 100%;
+}
