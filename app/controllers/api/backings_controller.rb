@@ -11,13 +11,14 @@ class Api::BackingsController < ApplicationController
     end
   end
   
-  def destroy
-  end
-
   def index 
     @backings = Backing.all
     render :index
   end 
+  
+  def destroy
+  end
+
 
   private
 
