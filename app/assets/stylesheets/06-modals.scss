@@ -92,19 +92,6 @@
   // border: none;
 }
 
-.selector-field {
-  // border: 1px solid lightgray;
-  // height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 107%;
-  transition: transform .3s ease-in-out, border .3s ease-in-out, box-shadow .3s ease-in-out;
-  font-size: 18px;
-  // box-shadow: 0px 2px 2px .5px rgb(226, 226, 226);
-  padding-left: 50px;
-  // border: none;
-}
 
 .search-form {
   height: 100%;
@@ -132,32 +119,56 @@
   object-fit: cover;
 }
 
+.selector-field {
+  border: 1px solid lightgray;
+  // height: 100px;
+  height: 100%;
+  overflow: scroll;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  width: 107%;
+  transition: transform .3s ease-in-out, border .3s ease-in-out, box-shadow .3s ease-in-out;
+  font-size: 18px;
+  // box-shadow: 0px 2px 2px .5px rgb(226, 226, 226);
+  padding-left: 30px;
+  background: white;
+  // border: none;
+}
 
+.search-container {
+  display: flex;
+  align-items: center;
+  // height: 115px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  // border-bottom: 1px solid rgb(224, 224, 224);
+  // margin-bottom: 3px;
+}
 
-// .css-vj8t7z.select__control {
-//  // border: 1px solid lightgray;
-//   height: 66px;
-//   display: flex;
-//   justify-content: center;
-//   width: 100%;
-//   align-items: center;
-//   transition: transform .3s ease-in-out, border .3s ease-in-out, box-shadow .3s ease-in-out;
-//   font-size: 18px;
-//   // box-shadow: 0px 2px 2px .5px rgb(226, 226, 226);
-//   padding-left: 50px;
-//   border: none;
+.search-container:hover {
+  box-shadow: 0px 2px 7px 2px rgb(226, 226, 226);
+}
+
+.search-result {
+  font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-left: 35px;
+  width: 100%;
+
+}
+
+// .search-i {
+//   width: 32%;
+//   // height: 50px;
 // }
 
-// .css-2o5izw.select__control.select__control--is--focused {
-//    // border: 1px solid lightgray;
-//   height: 66px;
-//   display: flex;
-//   justify-content: center;
-//   width: 100%;
-//   align-items: center;
-//   transition: transform .3s ease-in-out, border .3s ease-in-out, box-shadow .3s ease-in-out;
-//   font-size: 18px;
-//   // box-shadow: 0px 2px 2px .5px rgb(226, 226, 226);
-//   padding-left: 50px;
-//   border: none;
-// }
+.search-img {
+  background-image: image-url('temp2.png');
+  width: 120px;
+  // height: 20%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}

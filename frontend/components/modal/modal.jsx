@@ -39,7 +39,7 @@ class Modal extends Component {
     // debugger
     return e => this.setState({
       [property]: e.target.value,
-      searchbar: this.props.titles3.filter(title => title.title.includes(e.target.value))
+      searchbar: this.props.titles3.filter(title => title.title.toLowerCase().includes(e.target.value))
     });
 
   }
@@ -59,23 +59,20 @@ class Modal extends Component {
       if (letters.length == 0) { 
         search = <div></div> 
       } else { 
-        // search = (<select className="selector-field" onChange={this.update('title')}>
-        //   {searchbar.map(title => <option key={title.id} value={title.id}>{title.title}</option>)}
-        // </select>)
         search = (<div className="selector-field">
         {searchbar.map(title => (
-          <div className="rec-container" key={title.id}>
-            <Link className="rec-i" onClick={closeModal} to={`/projects/${title.id}`}>{title.title}
-              <img className="rec-img" src={title.image_url}></img>
+          <Link className="search-container" onClick={closeModal} key={title.id} to={`/projects/${title.id}`}>
+              <img className="search-img" src={title.image_url}></img>
+              <div className="search-result">
+                <div className="link">
+                  {title.title}
+                </div>
+                <div className="author">By&nbsp;<p className="author-link">{title.user.name}</p></div>
+              </div>
             </Link>
-            <ProjectIndexItem key={title.id} project={title} />
-          </div>
         ))}
         </div>)
-        // <div className="rec-container">
-        //   <Link className="rec-i" to={`/projects/${this.grabProject(2, 'obj').id}`}><img className="rec-img" src={this.grabProject(2, 'obj').image_url}></img></Link>
-        //   {this.grabProject(2)}
-        // </div>
+    
       }
 
     if (modal == "open") {
@@ -129,13 +126,13 @@ class Modal extends Component {
                   placeholder="Search by project title"
                   autoFocus
                 />
-                  {search}
               </form>
             </div>
             <div className="search-section-b">
               <div className="x-icon"></div>
             </div>
           </div>
+            {search}
         </div>
       )
     } else {
