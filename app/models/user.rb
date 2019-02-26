@@ -9,6 +9,15 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
     
   has_many :projects
+
+  has_many :backings,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: :Backing
+
+  has_many :backed_projects,
+    through: :backings,
+    source: :project
   
   # has_many :backings
 

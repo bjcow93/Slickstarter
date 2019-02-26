@@ -39,7 +39,7 @@ class Modal extends Component {
     // debugger
     return e => this.setState({
       [property]: e.target.value,
-      searchbar: this.props.titles3.filter(title => title.title.toLowerCase().includes(e.target.value))
+      searchbar: this.props.titles3.filter(title => title.title.toLowerCase().includes(e.target.value.toLowerCase()))
     });
 
   }
@@ -64,7 +64,7 @@ class Modal extends Component {
           <Link className="search-container" onClick={closeModal} key={title.id} to={`/projects/${title.id}`}>
               <img className="search-img" src={title.image_url}></img>
               <div className="search-result">
-                <div className="link">
+                <div className="search-link">
                   {title.title}
                 </div>
                 <div className="author">By&nbsp;<p className="author-link">{title.user.name}</p></div>
