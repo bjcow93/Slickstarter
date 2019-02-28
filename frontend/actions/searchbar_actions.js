@@ -2,8 +2,6 @@ import * as APIUtil from '../util/searchbar_api_util';
 export const RECEIVE_RESULTS = 'RECEIVE_RESULTS';
 
 
-
-
 export const receiveResults = results => ({
   type: RECEIVE_RESULTS,
   results,
