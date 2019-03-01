@@ -4,8 +4,7 @@ import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route, Switch } from 'react-router-dom';
-import Modal from './modal/modal';
-import CSModal from './modal/coming_soon_modal';
+import Modal from './modal/modal_container';
 import ProjectIndexContainer from './projects/project_index_container';
 import ProjectShowContainer from './projects/project_show_container';
 import ProjectFormContainer from './projects/project_form_container';
@@ -14,7 +13,6 @@ import CategoriesContainer from './categories/categories_container';
 const App = () => (
   <div>
     <Modal />
-    <CSModal />
     <NavbarContainer />
     <Route exact path="/" component={ProjectIndexContainer} />
     <Switch>

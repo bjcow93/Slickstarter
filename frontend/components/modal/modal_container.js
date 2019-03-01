@@ -1,10 +1,21 @@
-// import { connect } from 'react-redux';
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { login } from '../../actions/session_actions';
-// import Modal from './modal';
+import Modal from './modal';
+import { closeModal } from '../../actions/modal_actions';
+import { connect } from 'react-redux';
+import { logout } from '../../actions/session_actions';
 
-// const mapDispatchToProps = dispatch => ({
-//   logout: () => dispatch(logout())
-// });
+const mapStateToProps = state => {
+  const titles = filterProjects(Object.values(state.entities.projects))
+  return {
+    modal: state.ui.modal,
+    currentUser: state.session.currentUser,
+  };
+};
 
+const mapDispatchToProps = dispatch => {
+  return {
+    closeModal: () => dispatch(closeModal()),
+    logout: () => dispatch(logout())
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Modal);

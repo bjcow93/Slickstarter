@@ -96,7 +96,7 @@ class ProjectForm extends React.Component {
 
         <div className="create-input-field">
           <h1 className="create-headers">Let's set a goal for the project.</h1>
-          <h2 className="create-below-headers">Pick a project title to display to the community.</h2>
+          <h2 className="create-below-headers">Pick a funding goal you wish to reach.</h2>
           <input
             min="0"
             type="number"

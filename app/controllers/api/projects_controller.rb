@@ -12,6 +12,7 @@ class Api::ProjectsController < ApplicationController
 
     if @project.save
       render "/api/projects/show"
+      
     else
       render json: @project.errors.full_messages
     end
@@ -21,6 +22,7 @@ class Api::ProjectsController < ApplicationController
   def index 
     @projects = Project.all
     render :index
+    # render json: @projects
   end 
 
    def show

@@ -2,10 +2,12 @@ class Api::BackingsController < ApplicationController
    def create
     @backing = Backing.new(backing_params)
     @backing.user_id = current_user.id
-    @backing.project_id = params[:id]
+    # @backing.project_id = params[:id]
+
+    # debugger
 
     if @backing.save
-      render "/api/projects/show"
+      render "/api/backings/show"
     else
       render json: @backing.errors.full_messages
     end
@@ -15,6 +17,10 @@ class Api::BackingsController < ApplicationController
     @backings = Backing.all
     render :index
   end 
+
+  def show
+    @backing = Backing.find(params[:id])
+  end
   
   def destroy
   end
