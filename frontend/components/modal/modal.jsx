@@ -27,7 +27,7 @@ class Modal extends Component {
   render () {    
     const { modal, closeModal, currentUser } = this.props;
 
-    if (!modal) return null
+    if (!modal) return null;
 
     if (modal.name == "open") {
 

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = state => {
-  const titles = filterProjects(Object.values(state.entities.projects))
   return {
     modal: state.ui.modal,
     currentUser: state.session.currentUser,

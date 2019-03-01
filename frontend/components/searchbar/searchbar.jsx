@@ -6,35 +6,55 @@ class Searchbar extends React.Component {
     super(props);
 
     this.state = {
-      title: "",
       letters: "",
       searchbar: []
     };
   }
 
-  handleClose() {
-    this.setState({
-      letters: ""
-    });
-    this.props.closeModal();
+
+
+  // handleClose() {
+  //   this.setState({
+  //     letters: ""
+  //   });
+  //   this.props.closeModal();
+  // }
+
+  componentDidUpdate(prevProps, prevState) {
+    // debugger
+    if (prevState.letters !== this.state.letters || prevProps.titles.length !== this.props.titles.length) {
+      this.props.fetchFilteredResults(this.state.letters);
+
+      this.setState({
+        letters: this.state.letters,
+        searchbar: this.props.titles
+      });
+    }
+
+    // window.scrollTo(0, 0);
   }
 
-
   update(property) {
+    // this.props.fetchFilteredProjects(this.state.letters);
     return e => this.setState({
       [property]: e.target.value,
-      searchbar: this.props.titles3.filter(title => title.title.toLowerCase().includes(e.target.value.toLowerCase()))
+      // searchbar: this.props.titles3.filter(title => title.title.toLowerCase().includes(e.target.value.toLowerCase()))
+      searchbar: this.props.titles
     });
+
+    this.props.fetchFilteredProjects(this.state.letters);
 
   }
 
   render() {
+    debugger
     const { searchbar, letters } = this.state;
 
     var search
     if (letters.length == 0) {
       search = <div></div>
     } else {
+      // debugger
       search = (<div className="selector-field">
         {searchbar.map(title => (
           <Link className="search-container" onClick={this.props.closeModal} key={title.id} to={`/projects/${title.id}`}>
@@ -51,7 +71,7 @@ class Searchbar extends React.Component {
     }
 
     return (
-      <div className="search-modal-background" onClick={this.handleClose}>
+      <div className="search-modal-background" onClick={this.props.closeModal}>
         <div className="search-modal-section">
           <div className="search-section-a" onClick={e => e.stopPropagation()}>
             <form className="search-form">

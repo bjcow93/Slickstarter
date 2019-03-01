@@ -8,8 +8,6 @@ class Navbar extends Component {
     this.state = {
       title: ""
     };
-
-
   }
 
   render() {

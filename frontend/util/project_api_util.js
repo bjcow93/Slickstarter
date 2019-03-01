@@ -1,9 +1,10 @@
 export const fetchProjects = () => (
   $.ajax({
     method: 'GET',
-    url: 'api/projects'
+    url: 'api/projects',
   })
 );
+
 
 export const fetchProject = id => (
   $.ajax({
@@ -11,6 +12,7 @@ export const fetchProject = id => (
     url: `api/projects/${id}`
   })
 );
+
 
 export const createProject = project => (
   $.ajax({

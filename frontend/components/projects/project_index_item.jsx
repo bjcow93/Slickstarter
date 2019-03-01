@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ProjectIndexItem = ({ project }) => {
-
-  const funded = project.user.projects.length * 50 - (project.funding_goal % 6);
+  let pledged_array = project.backings.map((obj) => obj.pledge_amount);
+  let pledged = (pledged_array.reduce((acc, cv) => (acc + cv), 0)) * 100;
+  debugger
+  const funded = Math.round(pledged / project.funding_goal);
+  // const funded = project.user.projects.length * 50 - (project.funding_goal % 6);
  
   return (
     <div className="project-index-item">

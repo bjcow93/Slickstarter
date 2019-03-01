@@ -1,14 +1,17 @@
 import { connect } from 'react-redux';
 import Searchbar from './searchbar';
+import { fetchFilteredResults } from '../../actions/searchbar_actions';
 
 const mapStateToProps = state => {
+  // debugger
   return {
-    titles3: Object.values(state.entities.projects)
+    titles: Object.values(state.entities.searchbar)
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
+    fetchFilteredResults: (string) => fetchFilteredResults(string)
   };
 };
 
