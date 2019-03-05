@@ -25,8 +25,16 @@ class Api::ProjectsController < ApplicationController
     # render json: @projects
   end 
 
-   def show
+
+  def show
     @project = Project.find(params[:id])
+    # project = Project.find(params[:id])
+    # backings = project.backings
+
+    # render json: {
+    #   project: project,
+    #   backings: project.backings,
+    # }
   end
   
   
