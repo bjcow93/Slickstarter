@@ -82,7 +82,6 @@ constructor(props){
               <div className="days-to-go">{days_to_go}</div>
                 <p>days to go</p>
                 <br />
-              {/* <div className="backing-button">Back this project</div> */}
               <button className="backing-button" onClick={this.handleMod}>Back this project</button>
               <button className="reminder-button" onClick={this.props.openCSMod}>
                 <img className="heart-icon" src={window.heartUrl} />
