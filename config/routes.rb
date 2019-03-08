@@ -9,7 +9,6 @@ Rails.application.routes.draw do
 
     get '/search' => 'search#filter'
     # get '/projects/search' => 'projects#search'
-
   end 
 
   root "static_pages#root"
