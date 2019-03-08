@@ -29,12 +29,9 @@ class Searchbar extends React.Component {
         searchbar: this.props.titles
       });
     }
-
-    // window.scrollTo(0, 0);
   }
 
   update(property) {
-    // this.props.fetchFilteredProjects(this.state.letters);
     return e => this.setState({
       [property]: e.target.value,
       // searchbar: this.props.titles3.filter(title => title.title.toLowerCase().includes(e.target.value.toLowerCase()))
