@@ -21,7 +21,6 @@ class Searchbar extends React.Component {
   // }
 
   componentDidUpdate(prevProps, prevState) {
-    // debugger
     if (prevState.letters !== this.state.letters || prevProps.titles.length !== this.props.titles.length) {
       this.props.fetchFilteredResults(this.state.letters);
 
@@ -41,9 +40,6 @@ class Searchbar extends React.Component {
       // searchbar: this.props.titles3.filter(title => title.title.toLowerCase().includes(e.target.value.toLowerCase()))
       searchbar: this.props.titles
     });
-
-    this.props.fetchFilteredProjects(this.state.letters);
-
   }
 
   render() {
