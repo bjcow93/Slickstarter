@@ -3,7 +3,6 @@ import { Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 import ProjectIndexItem from './project_index_item';
-// import ProjectFormContainer from './project_form_container';
 
 class ProjectIndex extends Component {
   constructor(props) {
