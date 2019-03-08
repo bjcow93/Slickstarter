@@ -14,11 +14,12 @@ class Searchbar extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.letters !== this.state.letters || prevProps.titles.length !== this.props.titles.length) {
-      this.props.fetchFilteredResults(this.state.letters);
-
-      this.setState({
-        letters: this.state.letters,
-        searchbar: this.props.titles
+      this.props.fetchFilteredResults(this.state.letters).then(
+      () => {
+        this.setState({
+          letters: this.state.letters,
+          searchbar: this.props.titles
+        });
       });
     }
   }
