@@ -47,7 +47,7 @@ class Searchbar extends React.Component {
   }
 
   render() {
-    debugger
+    // debugger
     const { searchbar, letters } = this.state;
 
     var search

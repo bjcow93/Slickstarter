@@ -24,17 +24,6 @@ class BackingForm extends React.Component {
   }
 
 
-  // handleFile(e) {
-  //   const file = e.currentTarget.files[0];
-  //   const fileReader = new FileReader();
-  //   fileReader.onloadend = () => {
-  //     this.setState({ photoFile: file, photoUrl: fileReader.result });
-  //   };
-  //   if (file) {
-  //     fileReader.readAsDataURL(file);
-  //   }
-  // }
-
   handleSubmit(e) {
     e.preventDefault();
     const backing = Object.assign({}, this.state);
@@ -44,35 +33,16 @@ class BackingForm extends React.Component {
     formData.append('backing[pledge_amount]', pledge_amount);
     formData.append('backing[project_id]', project_id);
 
-    // if (this.state.photoFile) {
-    //   formData.append('project[image]', photoFile);
-    // }
-
-    // this.props.createBacking(formData).
 
     const promise = new Promise((resolve) => {this.props.closeModal(); resolve();});
 
-    // this.createBacking(formData).then(
-    //   () => {
-    //     this.props.history.push(`/projects/${this.props.projectId}/`);
-    //   }
-    // );
-// debugger
     this.createBacking(formData).then(promise).then(
       () => {
-        // location.reload();
-        // this.render()
-        this.props.fetchProject(project_id)
+        this.props.fetchProject(project_id);
       }
     );
-
-    // this.props.closeModal();
   }
 
-  // handleClick(e) {
-  //   e.preventDefault(),
-  //   closeModal()
-  // }
 
 
   render() {

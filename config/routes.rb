@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     resources :categories, only: [:create, :show]
     resources :project_categories, only: [:create]
     resources :backings, only: [:create, :edit, :destroy, :show]
+
+    get '/search' => 'search#filter'
+    # get '/projects/search' => 'projects#search'
+
   end 
 
   root "static_pages#root"
