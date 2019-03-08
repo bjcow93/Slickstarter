@@ -13,7 +13,6 @@ const mapStateToProps = ({ session, entities: { users } }) => {
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   closeModal: () => dispatch(closeModal()),
-  // openMod: (<button className="icon" onClick={() => dispatch(openModal('open'))}></button>),
   openLoginMod: () => dispatch(openModal('open')),
   openSearchMod: () => dispatch(openModal('search'))
 });
