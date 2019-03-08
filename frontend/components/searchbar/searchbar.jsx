@@ -12,14 +12,6 @@ class Searchbar extends React.Component {
   }
 
 
-
-  // handleClose() {
-  //   this.setState({
-  //     letters: ""
-  //   });
-  //   this.props.closeModal();
-  // }
-
   componentDidUpdate(prevProps, prevState) {
     if (prevState.letters !== this.state.letters || prevProps.titles.length !== this.props.titles.length) {
       this.props.fetchFilteredResults(this.state.letters);
