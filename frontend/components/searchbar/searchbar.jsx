@@ -47,14 +47,12 @@ class Searchbar extends React.Component {
   }
 
   render() {
-    // debugger
     const { searchbar, letters } = this.state;
 
-    var search
+    var search;
     if (letters.length == 0) {
       search = <div></div>
     } else {
-      // debugger
       search = (<div className="selector-field">
         {searchbar.map(title => (
           <Link className="search-container" onClick={this.props.closeModal} key={title.id} to={`/projects/${title.id}`}>
