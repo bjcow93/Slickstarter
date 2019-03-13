@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import ProjectShow from '../projects/project_show_container';
 
 class BackingForm extends React.Component {
   constructor(props) {
