@@ -4,4 +4,3 @@ class Api::SearchController < ApplicationController
     render 'api/projects/index'
   end
 end
-
