@@ -25,7 +25,7 @@ class Api::ProjectsController < ApplicationController
     # render json: @projects
   end 
 
-    def filter
+  def filter
     @projects = Project.where("LOWER(title) LIKE '%#{params[:string].downcase}%'")
     render :index
   end
