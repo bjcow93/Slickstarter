@@ -16,7 +16,6 @@ class Api::ProjectsController < ApplicationController
     else
       render json: @project.errors.full_messages
     end
-   
   end
 
   def index 
