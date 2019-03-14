@@ -8,7 +8,6 @@ def create
     # else
     #   render json: @project.errors.full_messages
     # end
-   
   end
 
   def show
