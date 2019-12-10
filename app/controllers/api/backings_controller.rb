@@ -14,7 +14,7 @@ class Api::BackingsController < ApplicationController
   end
   
   def index 
-    @backings = Backing.all
+    @backings = Backing.all()
     render :index
   end 
 

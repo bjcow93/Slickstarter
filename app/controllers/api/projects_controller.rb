@@ -20,7 +20,8 @@ class Api::ProjectsController < ApplicationController
 
   def index 
     @projects = Project.all()
-    render :index
+    # render :index
+    render "/api/projects/index"
     # render json: @projects
   end 
 
